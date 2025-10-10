@@ -1,0 +1,28 @@
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.video-item {
+  padding: 0;
+  overflow: hidden;
+}
+
+.video-title {
+  padding: 20px 20px 15px;
+  font-size: 1.25rem;
+  color: #1a1a1a;
+}
+
+.video-player {
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

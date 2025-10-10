@@ -1,0 +1,439 @@
+.online-classes-page {
+  min-height: 100vh;
+}
+
+.online-classes-page .page-hero {
+  background: linear-gradient(135deg, #00C2CB 0%, #00A0A8 100%);
+  color: white;
+  padding: 80px 0 60px;
+  text-align: center;
+}
+
+.online-classes-page .page-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.online-classes-page .page-hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.classes-grid {
+  display: grid;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.class-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.class-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.class-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.class-header:hover {
+  background: #f9f9f9;
+}
+
+.class-header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.class-thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.class-name {
+  font-size: 1.6rem;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #00C2CB;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.toggle-button:hover {
+  transform: scale(1.1);
+}
+
+.class-details {
+  padding: 0 20px 30px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.class-full-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
+  background: #f5f5f5;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 194, 203, 0.9);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:hover {
+  background: rgba(0, 194, 203, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 194, 203, 0.4);
+}
+
+.carousel-button-prev {
+  left: 15px;
+}
+
+.carousel-button-next {
+  right: 15px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.carousel-dot.active {
+  background: #00C2CB;
+  border-color: white;
+  transform: scale(1.3);
+}
+
+.class-info {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.class-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.class-stats {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #00C2CB;
+}
+
+.stats-title {
+  font-size: 1.2rem;
+  color: #00C2CB;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.stat-row:last-child {
+  border-bottom: none;
+}
+
+.stat-month {
+  font-weight: 600;
+  color: #333;
+  min-width: 100px;
+  font-size: 1.05rem;
+}
+
+.stat-details {
+  color: #666;
+  font-size: 1.05rem;
+}
+
+.gallery-count {
+  margin: 10px 0 0 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.class-info strong {
+  color: #00C2CB;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .online-classes-page .page-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .online-classes-page .page-hero p {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+
+  .class-header {
+    padding: 18px;
+  }
+
+  .class-header-content {
+    gap: 15px;
+  }
+
+  .class-thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+
+  .class-name {
+    font-size: 1.4rem;
+  }
+
+  .class-full-image {
+    max-height: 350px;
+  }
+
+  .carousel-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-button svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .carousel-button-prev {
+    left: 10px;
+  }
+
+  .carousel-button-next {
+    right: 10px;
+  }
+
+  .carousel-indicators {
+    padding: 6px 12px;
+    gap: 8px;
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .class-description {
+    font-size: 1rem;
+  }
+
+  .stats-title {
+    font-size: 1.1rem;
+  }
+
+  .stat-month {
+    min-width: 90px;
+    font-size: 1rem;
+  }
+
+  .stat-details {
+    font-size: 1rem;
+  }
+
+  .gallery-count {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .online-classes-page .page-hero {
+    padding: 60px 0 50px;
+  }
+
+  .online-classes-page .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .online-classes-page .page-hero p {
+    font-size: 1rem;
+  }
+
+  .class-header {
+    padding: 15px;
+  }
+
+  .class-thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+
+  .class-name {
+    font-size: 1.2rem;
+  }
+
+  .class-details {
+    padding: 0 15px 20px;
+  }
+
+  .class-info {
+    padding: 15px;
+  }
+
+  .class-description {
+    font-size: 0.95rem;
+  }
+
+  .class-stats {
+    padding: 15px;
+  }
+
+  .stats-title {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .stat-row {
+    padding: 8px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .stat-month {
+    min-width: auto;
+    font-size: 0.95rem;
+  }
+
+  .stat-details {
+    font-size: 0.95rem;
+  }
+
+  .gallery-count {
+    font-size: 0.95rem;
+  }
+
+  .class-full-image {
+    max-height: 280px;
+  }
+
+  .carousel-button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .carousel-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .carousel-button-prev {
+    left: 8px;
+  }
+
+  .carousel-button-next {
+    right: 8px;
+  }
+
+  .carousel-indicators {
+    padding: 5px 10px;
+    gap: 6px;
+    bottom: 10px;
+  }
+
+  .carousel-dot {
+    width: 7px;
+    height: 7px;
+  }
+}

@@ -1,0 +1,131 @@
+.program-navigation {
+  background: linear-gradient(135deg, #00C2CB 0%, #00A0A8 100%);
+  padding: 60px 0;
+  margin-top: 80px;
+}
+
+.program-nav-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.program-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.program-nav-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  min-height: 140px;
+}
+
+.program-nav-card:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.program-nav-icon {
+  transition: transform 0.3s ease;
+}
+
+.program-nav-card:hover .program-nav-icon {
+  transform: scale(1.15);
+}
+
+.program-nav-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .program-nav-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .program-navigation {
+    padding: 50px 0;
+    margin-top: 60px;
+  }
+
+  .program-nav-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .program-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .program-nav-card {
+    padding: 25px 15px;
+    min-height: 120px;
+  }
+
+  .program-nav-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .program-nav-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .program-navigation {
+    padding: 40px 0;
+    margin-top: 50px;
+  }
+
+  .program-nav-title {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+  }
+
+  .program-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .program-nav-card {
+    padding: 20px 12px;
+    min-height: 110px;
+    gap: 12px;
+  }
+
+  .program-nav-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .program-nav-name {
+    font-size: 0.9rem;
+  }
+}
+

@@ -1,0 +1,144 @@
+.program-detail-page {
+  min-height: 100vh;
+}
+
+.program-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.program-detail-image {
+  position: sticky;
+  top: 120px;
+}
+
+.program-detail-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.program-detail-text h2 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.program-detail-text h3 {
+  font-size: 1.8rem;
+  color: #00C2CB;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.program-detail-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.program-detail-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.program-detail-text ul li {
+  padding: 12px 0;
+  padding-left: 30px;
+  position: relative;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.program-detail-text ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #00C2CB;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.program-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #00C2CB 0%, #00A0A8 100%);
+  border-radius: 16px;
+  color: white;
+}
+
+.stat-box h4 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  font-size: 1.1rem;
+  color: white;
+  margin: 0;
+}
+
+@media (max-width: 968px) {
+  .program-detail-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .program-detail-image {
+    position: relative;
+    top: 0;
+  }
+  
+  .program-detail-text h2 {
+    font-size: 2rem;
+  }
+  
+  .program-detail-text h3 {
+    font-size: 1.5rem;
+  }
+  
+  .program-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .program-detail-text h2 {
+    font-size: 1.75rem;
+  }
+  
+  .program-detail-text h3 {
+    font-size: 1.3rem;
+  }
+  
+  .program-detail-text p,
+  .program-detail-text ul li {
+    font-size: 1rem;
+  }
+  
+  .stat-box h4 {
+    font-size: 2.5rem;
+  }
+  
+  .stat-box p {
+    font-size: 1rem;
+  }
+}
+

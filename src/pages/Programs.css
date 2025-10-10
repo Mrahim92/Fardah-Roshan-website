@@ -1,0 +1,70 @@
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.program-item {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.program-icon-large {
+  color: #00C2CB;
+  margin: 0 auto 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.program-description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.program-details {
+  color: #888;
+  line-height: 1.6;
+}
+
+.impact-section {
+  background: linear-gradient(135deg, #00C2CB 0%, #00A0A8 100%);
+  color: white;
+}
+
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.stat-card h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card h3 {
+    font-size: 2.5rem;
+  }
+}
+

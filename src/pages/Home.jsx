@@ -5,38 +5,40 @@ import './Home.css'
 function Home() {
   const { t } = useTranslation()
 
+  const baseUrl = import.meta.env.BASE_URL
+
   const slideshowImages = [
-    '/03.50.47_f32497e9.jpg',
+    `${baseUrl}03.50.47_f32497e9.jpg`,
   ]
 
   const programs = [
     {
-      image: '/computer-labs.webp',
+      image: `${baseUrl}computer-labs.webp`,
       title: t('programs.computerLabs'),
       link: '/computer-labs'
     },
     {
-      image: '/libraries.webp',
+      image: `${baseUrl}libraries.webp`,
       title: t('programs.libraries'),
       link: '/libraries'
     },
     {
-      image: '/microschools.webp',
+      image: `${baseUrl}microschools.webp`,
       title: t('programs.microschools'),
       link: '/microschools'
     },
     {
-      image: '/online-classes.webp',
+      image: `${baseUrl}online-classes.webp`,
       title: t('programs.onlineClasses'),
       link: '/online-classes'
     },
     {
-      image: '/students.webp',
+      image: `${baseUrl}students.webp`,
       title: t('programs.studentSupport'),
       link: '/student-support'
     },
     {
-      image: '/schools.webp',
+      image: `${baseUrl}schools.webp`,
       title: t('programs.schoolDevelopment'),
       link: '/school-development'
     },

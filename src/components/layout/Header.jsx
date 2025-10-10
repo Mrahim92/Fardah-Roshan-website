@@ -10,6 +10,7 @@ function Header() {
   const [isProgramsOpen, setIsProgramsOpen] = useState(false)
   const { t } = useTranslation()
   const location = useLocation()
+  const baseUrl = import.meta.env.BASE_URL
 
   const navItems = [
     { path: '/', label: t('nav.home') },
@@ -34,7 +35,7 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo">
-            <img src="/fra-logo.webp" alt="Fardah Roshan Academy" className="logo-image" />
+            <img src={`${baseUrl}fra-logo.webp`} alt="Fardah Roshan Academy" className="logo-image" />
           </Link>
 
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>

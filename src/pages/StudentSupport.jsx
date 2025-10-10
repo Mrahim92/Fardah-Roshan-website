@@ -6,6 +6,7 @@ import './StudentSupport.css'
 
 function StudentSupport() {
   const { t } = useTranslation()
+  const baseUrl = import.meta.env.BASE_URL
   const [openPrograms, setOpenPrograms] = useState({})
   const [currentImageIndex, setCurrentImageIndex] = useState({})
 
@@ -45,7 +46,7 @@ function StudentSupport() {
       name: 'TOEFL Preparation',
       date: 'November 2024',
       description: 'Fardah Roshan Academy provided financial assistance for two female nursing students to enroll in a TOEFL preparation course to further their academic and professional development.',
-      thumbnail: '/fra-logo.webp',
+            thumbnail: `${baseUrl}fra-logo.webp`,
       images: ['/fra-logo.webp']
     },
     {
@@ -53,10 +54,10 @@ function StudentSupport() {
       name: "Master's Degree",
       date: 'September 2024',
       description: "After completing his Bachelor's degree in Computer Science at Kandahar University in 2018, Nangialay Bawar faced challenges in continuing his education due to work commitments. With the assistance of Fardah Roshan Academy, Nangialay is now enrolled in an online Master's program in International Cooperation and Humanitarian Aid at Kalu Institute, Spain.",
-      thumbnail: '/Student_Support/Masters Degree/e5b223c9-1ff2-4ebf-80f4-86fd8c386500-1745058640576-picture.webp',
+            thumbnail: `${baseUrl}Student_Support/Masters Degree/e5b223c9-1ff2-4ebf-80f4-86fd8c386500-1745058640576-picture.webp`,
       images: [
-        '/Student_Support/Masters Degree/e5b223c9-1ff2-4ebf-80f4-86fd8c386500-1745058640576-picture.webp',
-        '/Student_Support/Masters Degree/img_1745058781164_0-1745058789570-picture.webp',
+              `${baseUrl}Student_Support/Masters Degree/e5b223c9-1ff2-4ebf-80f4-86fd8c386500-1745058640576-picture.webp`,
+              `${baseUrl}Student_Support/Masters Degree/img_1745058781164_0-1745058789570-picture.webp`,
       ]
     },
     {
@@ -64,13 +65,13 @@ function StudentSupport() {
       name: 'Herat Field Trip',
       date: 'November 12, 2021',
       description: 'A group of 50 students from the English and Pashto Literature Faculty of Kandahar University embarked on a three-day trip to Herat Province, accompanied by their teachers. This educational excursion aimed to expose students to the rich history and culture of Herat.\n\nDuring the trip, students had the opportunity to visit several historical sites and significant landmarks throughout Herat. The itinerary included explorations of ancient architecture and cultural heritage, fostering a deeper understanding of the region\'s historical context.\n\nThe entire trip was organized and funded by Fardah Roshan Academy, demonstrating their commitment to enhancing educational experiences for students. Mr. Ahmad Sajad Sarwari was responsible for overseeing the trip, ensuring that all logistics were managed effectively.\n\nThe students returned with valuable insights and a greater appreciation for Afghanistan\'s cultural heritage. Overall, the trip was a resounding success, contributing to the students\' academic and personal growth.',
-      thumbnail: '/Student_Support/Herat_Trip/img_1745057224507_0-1745057241590-picture.webp',
+            thumbnail: `${baseUrl}Student_Support/Herat_Trip/img_1745057224507_0-1745057241590-picture.webp`,
       images: [
-        '/Student_Support/Herat_Trip/img_1745057224507_0-1745057241590-picture.webp',
-        '/Student_Support/Herat_Trip/img_1745057224507_1-1745057242309-picture.webp',
-        '/Student_Support/Herat_Trip/img_1745057224507_2-1745057242438-picture.webp',
-        '/Student_Support/Herat_Trip/img_1745057224507_3-1745057242627-picture.webp',
-        '/Student_Support/Herat_Trip/img_1745057224508_4-1745057243641-picture.webp',
+              `${baseUrl}Student_Support/Herat_Trip/img_1745057224507_0-1745057241590-picture.webp`,
+              `${baseUrl}Student_Support/Herat_Trip/img_1745057224507_1-1745057242309-picture.webp`,
+              `${baseUrl}Student_Support/Herat_Trip/img_1745057224507_2-1745057242438-picture.webp`,
+              `${baseUrl}Student_Support/Herat_Trip/img_1745057224507_3-1745057242627-picture.webp`,
+              `${baseUrl}Student_Support/Herat_Trip/img_1745057224508_4-1745057243641-picture.webp`,
       ]
     },
   ]

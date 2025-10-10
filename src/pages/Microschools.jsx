@@ -6,6 +6,7 @@ import './Microschools.css'
 
 function Microschools() {
   const { t } = useTranslation()
+  const baseUrl = import.meta.env.BASE_URL
   const [openSemesters, setOpenSemesters] = useState({})
   const [currentImageIndex, setCurrentImageIndex] = useState({})
 
@@ -47,13 +48,13 @@ function Microschools() {
       students: 'N/A',
       topics: 'N/A',
       description: 'Details about Semester One curriculum and activities.',
-      thumbnail: '/Microschools/Semester 1/img_1739615465363_0-1739615484011-picture.webp',
+            thumbnail: `${baseUrl}Microschools/Semester 1/img_1739615465363_0-1739615484011-picture.webp`,
       images: [
-        '/Microschools/Semester 1/img_1739615465363_0-1739615484011-picture.webp',
-        '/Microschools/Semester 1/img_1739615465363_1-1739615484060-picture.webp',
-        '/Microschools/Semester 1/img_1739615465363_2-1739615484065-picture.webp',
-        '/Microschools/Semester 1/img_1739615465363_3-1739615484080-picture.webp',
-        '/Microschools/Semester 1/img_1739615465363_4-1739615484081-picture.webp',
+              `${baseUrl}Microschools/Semester 1/img_1739615465363_0-1739615484011-picture.webp`,
+              `${baseUrl}Microschools/Semester 1/img_1739615465363_1-1739615484060-picture.webp`,
+              `${baseUrl}Microschools/Semester 1/img_1739615465363_2-1739615484065-picture.webp`,
+              `${baseUrl}Microschools/Semester 1/img_1739615465363_3-1739615484080-picture.webp`,
+              `${baseUrl}Microschools/Semester 1/img_1739615465363_4-1739615484081-picture.webp`,
       ]
     },
     {
@@ -63,16 +64,16 @@ function Microschools() {
       students: 'N/A',
       topics: 'N/A',
       description: 'Details about Semester Two curriculum and activities.',
-      thumbnail: '/Microschools/Semester 2/img_1739616011004_0-1739616041454-picture.webp',
+            thumbnail: `${baseUrl}Microschools/Semester 2/img_1739616011004_0-1739616041454-picture.webp`,
       images: [
-        '/Microschools/Semester 2/img_1739616011004_0-1739616041454-picture.webp',
-        '/Microschools/Semester 2/img_1739616011004_1-1739616041462-picture.webp',
-        '/Microschools/Semester 2/img_1739616011004_2-1739616041465-picture.webp',
-        '/Microschools/Semester 2/img_1739616011004_3-1739616041477-picture.webp',
-        '/Microschools/Semester 2/img_1739616011004_4-1739616041478-picture.webp',
-        '/Microschools/Semester 2/img_1739616011004_5-1739616041481-picture.webp',
-        '/Microschools/Semester 2/img_1739616011004_6-1739616041483-picture.webp',
-        '/Microschools/Semester 2/img_1739616011004_7-1739616041490-picture.webp',
+              `${baseUrl}Microschools/Semester 2/img_1739616011004_0-1739616041454-picture.webp`,
+              `${baseUrl}Microschools/Semester 2/img_1739616011004_1-1739616041462-picture.webp`,
+              `${baseUrl}Microschools/Semester 2/img_1739616011004_2-1739616041465-picture.webp`,
+              `${baseUrl}Microschools/Semester 2/img_1739616011004_3-1739616041477-picture.webp`,
+              `${baseUrl}Microschools/Semester 2/img_1739616011004_4-1739616041478-picture.webp`,
+              `${baseUrl}Microschools/Semester 2/img_1739616011004_5-1739616041481-picture.webp`,
+              `${baseUrl}Microschools/Semester 2/img_1739616011004_6-1739616041483-picture.webp`,
+              `${baseUrl}Microschools/Semester 2/img_1739616011004_7-1739616041490-picture.webp`,
       ]
     },
     {
@@ -82,7 +83,7 @@ function Microschools() {
       students: 'N/A',
       topics: 'N/A',
       description: 'Details about Semester Three curriculum and activities.',
-      thumbnail: '/fra-logo.webp',
+            thumbnail: `${baseUrl}fra-logo.webp`,
       images: ['/fra-logo.webp']
     },
     {
@@ -92,15 +93,15 @@ function Microschools() {
       students: 'N/A',
       topics: 'N/A',
       description: 'Details about Semester Four curriculum and activities.',
-      thumbnail: '/Microschools/Semester 4/img_1739616436394_0-1739616443408-picture.webp',
+            thumbnail: `${baseUrl}Microschools/Semester 4/img_1739616436394_0-1739616443408-picture.webp`,
       images: [
-        '/Microschools/Semester 4/img_1739616436394_0-1739616443408-picture.webp',
-        '/Microschools/Semester 4/img_1739616436395_1-1739616443414-picture.webp',
-        '/Microschools/Semester 4/img_1739616436395_2-1739616443415-picture.webp',
-        '/Microschools/Semester 4/img_1739616436395_3-1739616443423-picture.webp',
-        '/Microschools/Semester 4/img_1739616436395_4-1739616443425-picture.webp',
-        '/Microschools/Semester 4/img_1739616436395_5-1739616443429-picture.webp',
-        '/Microschools/Semester 4/img_1739616436395_6-1739616443429-picture.webp',
+              `${baseUrl}Microschools/Semester 4/img_1739616436394_0-1739616443408-picture.webp`,
+              `${baseUrl}Microschools/Semester 4/img_1739616436395_1-1739616443414-picture.webp`,
+              `${baseUrl}Microschools/Semester 4/img_1739616436395_2-1739616443415-picture.webp`,
+              `${baseUrl}Microschools/Semester 4/img_1739616436395_3-1739616443423-picture.webp`,
+              `${baseUrl}Microschools/Semester 4/img_1739616436395_4-1739616443425-picture.webp`,
+              `${baseUrl}Microschools/Semester 4/img_1739616436395_5-1739616443429-picture.webp`,
+              `${baseUrl}Microschools/Semester 4/img_1739616436395_6-1739616443429-picture.webp`,
       ]
     },
     {
@@ -110,14 +111,14 @@ function Microschools() {
       students: 'N/A',
       topics: 'N/A',
       description: 'Details about Semester Five curriculum and activities.',
-      thumbnail: '/Microschools/Semester 5/img_1739616725725_0-1739616758680-picture.webp',
+            thumbnail: `${baseUrl}Microschools/Semester 5/img_1739616725725_0-1739616758680-picture.webp`,
       images: [
-        '/Microschools/Semester 5/img_1739616725725_0-1739616758680-picture.webp',
-        '/Microschools/Semester 5/img_1739616725725_1-1739616758686-picture.webp',
-        '/Microschools/Semester 5/img_1739616725725_2-1739616758691-picture.webp',
-        '/Microschools/Semester 5/img_1739616725725_3-1739616758692-picture.webp',
-        '/Microschools/Semester 5/img_1739616725725_4-1739616758698-picture.webp',
-        '/Microschools/Semester 5/img_1739616725725_5-1739616758700-picture.webp',
+              `${baseUrl}Microschools/Semester 5/img_1739616725725_0-1739616758680-picture.webp`,
+              `${baseUrl}Microschools/Semester 5/img_1739616725725_1-1739616758686-picture.webp`,
+              `${baseUrl}Microschools/Semester 5/img_1739616725725_2-1739616758691-picture.webp`,
+              `${baseUrl}Microschools/Semester 5/img_1739616725725_3-1739616758692-picture.webp`,
+              `${baseUrl}Microschools/Semester 5/img_1739616725725_4-1739616758698-picture.webp`,
+              `${baseUrl}Microschools/Semester 5/img_1739616725725_5-1739616758700-picture.webp`,
       ]
     },
     {
@@ -127,13 +128,13 @@ function Microschools() {
       students: 'N/A',
       topics: 'N/A',
       description: 'Details about Semester Six curriculum and activities.',
-      thumbnail: '/Microschools/Semester 6/img_1739623622831_0-1739623627365-picture.webp',
+            thumbnail: `${baseUrl}Microschools/Semester 6/img_1739623622831_0-1739623627365-picture.webp`,
       images: [
-        '/Microschools/Semester 6/img_1739623622831_0-1739623627365-picture.webp',
-        '/Microschools/Semester 6/img_1739623622831_1-1739623627367-picture.webp',
-        '/Microschools/Semester 6/img_1739623622831_2-1739623627373-picture.webp',
-        '/Microschools/Semester 6/img_1739623622831_3-1739623627374-picture.webp',
-        '/Microschools/Semester 6/img_1739623622831_4-1739623627375-picture.webp',
+              `${baseUrl}Microschools/Semester 6/img_1739623622831_0-1739623627365-picture.webp`,
+              `${baseUrl}Microschools/Semester 6/img_1739623622831_1-1739623627367-picture.webp`,
+              `${baseUrl}Microschools/Semester 6/img_1739623622831_2-1739623627373-picture.webp`,
+              `${baseUrl}Microschools/Semester 6/img_1739623622831_3-1739623627374-picture.webp`,
+              `${baseUrl}Microschools/Semester 6/img_1739623622831_4-1739623627375-picture.webp`,
       ]
     },
     {
@@ -143,7 +144,7 @@ function Microschools() {
       students: 'N/A',
       topics: 'N/A',
       description: 'Details about Semester Seven curriculum and activities.',
-      thumbnail: '/fra-logo.webp',
+            thumbnail: `${baseUrl}fra-logo.webp`,
       images: ['/fra-logo.webp']
     },
     {
@@ -153,16 +154,16 @@ function Microschools() {
       students: 'N/A',
       topics: 'N/A',
       description: 'Details about Semester Eight curriculum and activities.',
-      thumbnail: '/Microschools/Semester 8/img_1751697824613_0-1751697832984-picture.webp',
+            thumbnail: `${baseUrl}Microschools/Semester 8/img_1751697824613_0-1751697832984-picture.webp`,
       images: [
-        '/Microschools/Semester 8/img_1751697824613_0-1751697832984-picture.webp',
-        '/Microschools/Semester 8/img_1751697824613_1-1751697832986-picture.webp',
-        '/Microschools/Semester 8/img_1751697824613_2-1751697832989-picture.webp',
-        '/Microschools/Semester 8/img_1751697824613_3-1751697832992-picture.webp',
-        '/Microschools/Semester 8/img_1751697824613_4-1751697832993-picture.webp',
-        '/Microschools/Semester 8/img_1751697824614_5-1751697832994-picture.webp',
-        '/Microschools/Semester 8/img_1751697824614_6-1751697832999-picture.webp',
-        '/Microschools/Semester 8/img_1751697824614_7-1751697833001-picture.webp',
+              `${baseUrl}Microschools/Semester 8/img_1751697824613_0-1751697832984-picture.webp`,
+              `${baseUrl}Microschools/Semester 8/img_1751697824613_1-1751697832986-picture.webp`,
+              `${baseUrl}Microschools/Semester 8/img_1751697824613_2-1751697832989-picture.webp`,
+              `${baseUrl}Microschools/Semester 8/img_1751697824613_3-1751697832992-picture.webp`,
+              `${baseUrl}Microschools/Semester 8/img_1751697824613_4-1751697832993-picture.webp`,
+              `${baseUrl}Microschools/Semester 8/img_1751697824614_5-1751697832994-picture.webp`,
+              `${baseUrl}Microschools/Semester 8/img_1751697824614_6-1751697832999-picture.webp`,
+              `${baseUrl}Microschools/Semester 8/img_1751697824614_7-1751697833001-picture.webp`,
       ]
     },
     {
@@ -172,21 +173,21 @@ function Microschools() {
       students: 'N/A',
       topics: 'N/A',
       description: 'Details about Semester Nine curriculum and activities.',
-      thumbnail: '/Microschools/Semester 9/img_1755518678374_0-1755518712533-picture.webp',
+            thumbnail: `${baseUrl}Microschools/Semester 9/img_1755518678374_0-1755518712533-picture.webp`,
       images: [
-        '/Microschools/Semester 9/img_1755518678374_0-1755518712533-picture.webp',
-        '/Microschools/Semester 9/img_1755518678374_1-1755518712539-picture.webp',
-        '/Microschools/Semester 9/img_1755518678374_10-1755518712577-picture.webp',
-        '/Microschools/Semester 9/img_1755518678374_2-1755518712541-picture.webp',
-        '/Microschools/Semester 9/img_1755518678374_3-1755518712554-picture.webp',
-        '/Microschools/Semester 9/img_1755518678374_4-1755518712555-picture.webp',
-        '/Microschools/Semester 9/img_1755518678374_5-1755518712557-picture.webp',
-        '/Microschools/Semester 9/img_1755518678374_6-1755518712557-picture.webp',
-        '/Microschools/Semester 9/img_1755518678374_7-1755518712557-picture.webp',
-        '/Microschools/Semester 9/img_1755518678374_8-1755518712564-picture.webp',
-        '/Microschools/Semester 9/img_1755518678374_9-1755518712567-picture.webp',
-        '/Microschools/Semester 9/img_1755519069222_0-1755519093319-picture.webp',
-        '/Microschools/Semester 9/img_1755519129791_0-1755519144266-picture.webp',
+              `${baseUrl}Microschools/Semester 9/img_1755518678374_0-1755518712533-picture.webp`,
+              `${baseUrl}Microschools/Semester 9/img_1755518678374_1-1755518712539-picture.webp`,
+              `${baseUrl}Microschools/Semester 9/img_1755518678374_10-1755518712577-picture.webp`,
+              `${baseUrl}Microschools/Semester 9/img_1755518678374_2-1755518712541-picture.webp`,
+              `${baseUrl}Microschools/Semester 9/img_1755518678374_3-1755518712554-picture.webp`,
+              `${baseUrl}Microschools/Semester 9/img_1755518678374_4-1755518712555-picture.webp`,
+              `${baseUrl}Microschools/Semester 9/img_1755518678374_5-1755518712557-picture.webp`,
+              `${baseUrl}Microschools/Semester 9/img_1755518678374_6-1755518712557-picture.webp`,
+              `${baseUrl}Microschools/Semester 9/img_1755518678374_7-1755518712557-picture.webp`,
+              `${baseUrl}Microschools/Semester 9/img_1755518678374_8-1755518712564-picture.webp`,
+              `${baseUrl}Microschools/Semester 9/img_1755518678374_9-1755518712567-picture.webp`,
+              `${baseUrl}Microschools/Semester 9/img_1755519069222_0-1755519093319-picture.webp`,
+              `${baseUrl}Microschools/Semester 9/img_1755519129791_0-1755519144266-picture.webp`,
       ]
     },
   ]

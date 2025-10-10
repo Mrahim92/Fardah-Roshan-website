@@ -6,6 +6,7 @@ import './OnlineClasses.css'
 
 function OnlineClasses() {
   const { t } = useTranslation()
+  const baseUrl = import.meta.env.BASE_URL
   const [openClasses, setOpenClasses] = useState({})
   const [currentImageIndex, setCurrentImageIndex] = useState({})
 
@@ -49,10 +50,10 @@ function OnlineClasses() {
         { month: 'February', classes: '5 classes', students: '45 students' },
         { month: 'April', classes: '1 class', students: '24 students' },
       ],
-      thumbnail: '/Online_Classes/img_1745061597331_0-1745061609972-picture.webp',
+            thumbnail: `${baseUrl}Online_Classes/img_1745061597331_0-1745061609972-picture.webp`,
       images: [
-        '/Online_Classes/img_1745061597331_0-1745061609972-picture.webp',
-        '/Online_Classes/img_1745061906649_0-1745061917672-picture.webp',
+              `${baseUrl}Online_Classes/img_1745061597331_0-1745061609972-picture.webp`,
+              `${baseUrl}Online_Classes/img_1745061906649_0-1745061917672-picture.webp`,
       ]
     },
   ]

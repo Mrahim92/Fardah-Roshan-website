@@ -3,48 +3,49 @@ import './About.css'
 
 function About() {
   const { t } = useTranslation()
+  const baseUrl = import.meta.env.BASE_URL
 
   const teamMembers = [
     {
       name: 'Zia Akbary',
       role: 'Chief Executive Officer',
-      image: '/Team Members/Zia_Akbary_Chief_Executive_Officer.webp',
+      image: `${baseUrl}Team Members/Zia_Akbary_Chief_Executive_Officer.webp`,
       bio: t('about.teamBios.zia')
     },
     {
       name: 'Dr. Zarina Akbary, Ph.D',
       role: 'Cofounder',
-      image: '/Team Members/Dr._Zarina_Akbary_Cofounder.webp',
+      image: `${baseUrl}Team Members/Dr._Zarina_Akbary_Cofounder.webp`,
       bio: t('about.teamBios.zarina')
     },
     {
       name: 'Sajad Ahmad Sarwari',
       role: 'Program Coordinator',
-      image: '/Team Members/Sajad_Ahmad_Sarwari_Program_Coordinator.webp',
+      image: `${baseUrl}Team Members/Sajad_Ahmad_Sarwari_Program_Coordinator.webp`,
       bio: t('about.teamBios.sajad')
     },
     {
       name: 'Zainab Sarwari',
       role: 'Program Administrator',
-      image: '/Team Members/Zainab_Sarwari_Program_Administrator.webp',
+      image: `${baseUrl}Team Members/Zainab_Sarwari_Program_Administrator.webp`,
       bio: t('about.teamBios.zainab')
     },
     {
       name: 'Basir Ahmad Ahmadi',
       role: 'Library Coordinator',
-      image: '/Team Members/Basir_Ahmad_Ahmadi_Library_Coordinator.webp',
+      image: `${baseUrl}Team Members/Basir_Ahmad_Ahmadi_Library_Coordinator.webp`,
       bio: t('about.teamBios.basir')
     },
     {
       name: 'Nangialay Bawar',
       role: 'Communications Officer',
-      image: '/Team Members/Nangialay_Bawar_Communications_Officer.webp',
+      image: `${baseUrl}Team Members/Nangialay_Bawar_Communications_Officer.webp`,
       bio: t('about.teamBios.nangialay')
     },
     {
       name: 'Haj Gull Aetekal',
       role: 'Financial Administrator',
-      image: '/Team Members/Haj_Gull_Aetekal_Financial_Administrator.webp',
+      image: `${baseUrl}Team Members/Haj_Gull_Aetekal_Financial_Administrator.webp`,
       bio: t('about.teamBios.hajgull')
     },
   ]
@@ -63,7 +64,7 @@ function About() {
           <div className="about-content">
             <div className="about-image">
               <img
-                src="/About Us/WhatsApp Image 2024-08-31 at 15-1738409329116-about_us_section_image.webp"
+                src={`${baseUrl}About Us/WhatsApp Image 2024-08-31 at 15-1738409329116-about_us_section_image.webp`}
                 alt={t('about.title')}
               />
             </div>
@@ -99,7 +100,7 @@ function About() {
           <h2 className="section-title">{t('about.founderMessage')}</h2>
           <div className="founder-content">
             <img
-              src="/Founder Message/img_1739700078864_0-1739700085440-pictures.webp"
+              src={`${baseUrl}Founder Message/img_1739700078864_0-1739700085440-pictures.webp`}
               alt={t('about.founderMessage')}
               className="founder-image"
             />

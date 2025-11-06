@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react'
+import SEO from '../components/SEO'
 import ProgramNavigation from '../components/ProgramNavigation'
 import './SchoolDevelopment.css'
 
@@ -94,6 +95,12 @@ function SchoolDevelopment() {
 
   return (
     <div className="school-development-page">
+      <SEO 
+        title="School Development"
+        description="Building and equipping schools across Afghanistan. Classroom construction, furniture, administrative equipment, and essential resources for better learning environments."
+        keywords="school development Afghanistan, classroom construction, school equipment, education infrastructure, school supplies"
+        path="/school-development"
+      />
       <section className="page-hero">
         <div className="container">
           <h1>School Development</h1>

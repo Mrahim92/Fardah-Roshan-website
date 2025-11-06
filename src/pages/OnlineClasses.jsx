@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, BookOpen } from 'lucide-react'
+import SEO from '../components/SEO'
 import ProgramNavigation from '../components/ProgramNavigation'
 import './OnlineClasses.css'
 
@@ -65,6 +66,12 @@ function OnlineClasses() {
 
   return (
     <div className="online-classes-page">
+      <SEO 
+        title="Online Classes"
+        description="Free online English classes for women in Afghanistan, taught by Afghan women teachers. Beginner, intermediate, and advanced levels."
+        keywords="online classes Afghanistan, English classes, women education, online learning, Afghan teachers"
+        path="/online-classes"
+      />
       <section className="page-hero">
         <div className="container">
           <h1>Online Classes</h1>

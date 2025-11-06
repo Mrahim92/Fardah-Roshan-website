@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, BookOpen, Calendar, Users } from 'lucide-react'
+import SEO from '../components/SEO'
 import ProgramNavigation from '../components/ProgramNavigation'
 import './Microschools.css'
 
@@ -199,6 +200,12 @@ function Microschools() {
 
   return (
     <div className="microschools-page">
+      <SEO 
+        title="Microschools"
+        description="Community-based microschools providing quality education across 9 semesters. Small class sizes, personalized learning, and local engagement."
+        keywords="microschools Afghanistan, community education, small class sizes, personalized learning, Afghan students"
+        path="/microschools"
+      />
       <section className="page-hero">
         <div className="container">
           <h1>Microschools</h1>

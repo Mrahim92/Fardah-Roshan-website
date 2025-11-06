@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import SEO from '../components/SEO'
 import './ThankYou.css'
 
 function ThankYou() {
@@ -15,6 +16,13 @@ function ThankYou() {
 
   return (
     <div className="thankyou-page">
+      <SEO 
+        title="Thank You"
+        description="Thank you for your generous donation to Fardah Roshan Academy. Your support makes a difference in Afghan education."
+        keywords="donation thank you, charity receipt, nonprofit donation"
+        path="/thank-you"
+        noindex={true}
+      />
       <section className="page-hero">
         <div className="container">
           <h1>{t('thankYou.title')}</h1>

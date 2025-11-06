@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react'
+import SEO from '../components/SEO'
 import ProgramNavigation from '../components/ProgramNavigation'
 import './ComputerLabs.css'
 
@@ -334,6 +335,12 @@ function ComputerLabs() {
 
   return (
     <div className="computer-labs-page">
+      <SEO 
+        title="Computer Labs"
+        description="Modern computer education facilities in schools across Herat, Kandahar, Helmand, and Bamiyan. Supporting digital literacy for Afghan students."
+        keywords="computer labs Afghanistan, computer education, digital literacy, technology education, Afghan schools"
+        path="/computer-labs"
+      />
       <section className="page-hero">
         <div className="container">
           <h1>{t('programs.computerLabs')}</h1>

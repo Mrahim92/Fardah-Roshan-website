@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './Donate.css'
 
 // PayPal Client ID - LIVE (Production)
@@ -182,6 +183,13 @@ function Donate() {
 
   return (
     <div className="donate-page">
+      <SEO 
+        title="Donate"
+        description="Make a tax-deductible donation to Fardah Roshan Academy. Your support funds computer labs, libraries, and educational programs across Afghanistan. 501(c)(3) nonprofit. EIN: 85-4170493"
+        keywords="donate Afghanistan education, tax-deductible donation, 501c3 nonprofit, support Afghan students, charity donation, educational charity"
+        type="website"
+        path="/donate"
+      />
       <section className="page-hero">
         <div className="container">
           <h1>{t('donate.title')}</h1>

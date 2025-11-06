@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, GraduationCap } from 'lucide-react'
+import SEO from '../components/SEO'
 import ProgramNavigation from '../components/ProgramNavigation'
 import './StudentSupport.css'
 
@@ -83,6 +84,12 @@ function StudentSupport() {
 
   return (
     <div className="student-support-page">
+      <SEO 
+        title="Student Support"
+        description="Financial assistance and educational opportunities for Afghan students. TOEFL prep, master's degree support, and field trips."
+        keywords="student support Afghanistan, scholarships, TOEFL preparation, master's degree, educational assistance"
+        path="/student-support"
+      />
       <section className="page-hero">
         <div className="container">
           <h1>Student Support</h1>

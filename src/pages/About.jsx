@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import SEO from '../components/SEO'
 import './About.css'
 
 function About() {
@@ -52,6 +53,12 @@ function About() {
 
   return (
     <div className="about-page">
+      <SEO 
+        title="About Us"
+        description="Learn about Fardah Roshan Academy's mission to increase literacy and support education across Afghanistan. Meet our team and discover our story."
+        keywords="about us, Afghanistan education nonprofit, literacy mission, team, organization history"
+        path="/about"
+      />
       <section className="page-hero">
         <div className="container">
           <h1>{t('about.mission')}</h1>

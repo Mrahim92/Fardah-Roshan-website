@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react'
+import SEO from '../components/SEO'
 import ProgramNavigation from '../components/ProgramNavigation'
 import './Libraries.css'
 
@@ -217,6 +218,12 @@ function Libraries() {
 
   return (
     <div className="libraries-page">
+      <SEO 
+        title="Libraries"
+        description="Well-stocked libraries promoting literacy across Afghanistan in Herat, Kandahar, Helmand, and Nimroz. Free access to books and resources."
+        keywords="libraries Afghanistan, literacy program, reading resources, Afghan education, book access"
+        path="/libraries"
+      />
       <section className="page-hero">
         <div className="container">
           <h1>{t('programs.libraries')}</h1>

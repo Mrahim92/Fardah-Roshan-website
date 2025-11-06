@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Mail, Send } from 'lucide-react'
+import SEO from '../components/SEO'
 import './Contact.css'
 
 function Contact() {
@@ -28,6 +29,12 @@ function Contact() {
 
   return (
     <div className="contact-page">
+      <SEO 
+        title="Contact Us"
+        description="Get in touch with Fardah Roshan Academy. Email us at info@fardahroshan.org. We'd love to hear from you."
+        keywords="contact, email, reach out, Afghanistan education nonprofit"
+        path="/contact"
+      />
       <section className="page-hero">
         <div className="container">
           <h1>{t('contact.title')}</h1>

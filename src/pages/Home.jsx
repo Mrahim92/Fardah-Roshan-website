@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './Home.css'
 
 function Home() {
@@ -46,6 +47,12 @@ function Home() {
 
   return (
     <div className="home">
+      <SEO 
+        title="Home"
+        description="501(c)(3) nonprofit providing computer labs, libraries, and educational programs across Afghanistan. Support literacy and learning opportunities for Afghan students."
+        keywords="Afghanistan education, nonprofit, literacy, computer labs, libraries, student support, school development, 501c3, charity"
+        path="/"
+      />
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-slideshow">

@@ -12,6 +12,7 @@ function Contact() {
     subject: '',
     message: ''
   })
+  const [status, setStatus] = useState('') // 'sending', 'success', 'error'
 
   const handleChange = (e) => {
     setFormData({
@@ -20,11 +21,30 @@ function Contact() {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // In a real app, this would send data to a server
-    alert(t('contact.form.success'))
-    setFormData({ name: '', email: '', subject: '', message: '' })
+    setStatus('sending')
+
+    try {
+      const response = await fetch('https://formspree.io/f/mrbonlbd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+        // Clear success message after 5 seconds
+        setTimeout(() => setStatus(''), 5000)
+      } else {
+        setStatus('error')
+      }
+    } catch (error) {
+      setStatus('error')
+    }
   }
 
   return (
@@ -111,9 +131,25 @@ function Contact() {
                 />
               </div>
 
-              <button type="submit" className="btn btn-primary">
+              {status === 'success' && (
+                <div className="form-message success">
+                  ✅ {t('contact.form.success')}
+                </div>
+              )}
+              
+              {status === 'error' && (
+                <div className="form-message error">
+                  ❌ Something went wrong. Please try again or email us directly at info@fardahroshan.org
+                </div>
+              )}
+
+              <button 
+                type="submit" 
+                className="btn btn-primary"
+                disabled={status === 'sending'}
+              >
                 <Send size={20} />
-                {t('contact.form.submit')}
+                {status === 'sending' ? 'Sending...' : t('contact.form.submit')}
               </button>
             </form>
           </div>

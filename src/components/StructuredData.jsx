@@ -10,7 +10,7 @@ function StructuredData() {
     "name": "Fardah Roshan Academy",
     "alternateName": "فرده روشن اکادمی",
     "url": siteUrl,
-    "logo": `${siteUrl}/logo.webp`,
+    "logo": `${siteUrl}/logo.svg`,
     "description": "501(c)(3) nonprofit providing computer labs, libraries, and educational programs across Afghanistan to increase literacy and support education.",
     "foundingDate": "2020",
     "taxID": "85-4170493",

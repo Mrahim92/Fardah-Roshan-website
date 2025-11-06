@@ -35,7 +35,7 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo">
-            <img src={`${baseUrl}fra-logo.webp`} alt="Fardah Roshan Academy" className="logo-image" />
+            <img src={`${baseUrl}logo.svg`} alt="Fardah Roshan Academy" className="logo-image" />
           </Link>
 
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>

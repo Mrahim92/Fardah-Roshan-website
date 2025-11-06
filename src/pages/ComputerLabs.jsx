@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 import SEO from '../components/SEO'
+import OptimizedCarousel from '../components/OptimizedCarousel'
 import ProgramNavigation from '../components/ProgramNavigation'
 import './ComputerLabs.css'
 
@@ -9,7 +10,6 @@ function ComputerLabs() {
   const { t, i18n } = useTranslation()
   const baseUrl = import.meta.env.BASE_URL
   const [openLabs, setOpenLabs] = useState({})
-  const [currentImageIndex, setCurrentImageIndex] = useState({})
   
   // Check if current language is RTL
   const isRTL = i18n.language === 'fa' || i18n.language === 'ps'
@@ -18,31 +18,6 @@ function ComputerLabs() {
     setOpenLabs(prev => ({
       ...prev,
       [labId]: !prev[labId]
-    }))
-    // Reset carousel to first image when opening
-    if (!openLabs[labId]) {
-      setCurrentImageIndex(prev => ({
-        ...prev,
-        [labId]: 0
-      }))
-    }
-  }
-
-  const nextImage = (labId, totalImages, e) => {
-    e.stopPropagation()
-    const direction = isRTL ? -1 : 1
-    setCurrentImageIndex(prev => ({
-      ...prev,
-      [labId]: ((prev[labId] || 0) + direction + totalImages) % totalImages
-    }))
-  }
-
-  const prevImage = (labId, totalImages, e) => {
-    e.stopPropagation()
-    const direction = isRTL ? 1 : -1
-    setCurrentImageIndex(prev => ({
-      ...prev,
-      [labId]: ((prev[labId] || 0) + direction + totalImages) % totalImages
     }))
   }
 
@@ -357,8 +332,6 @@ function ComputerLabs() {
                 
                 <div className="labs-grid">
                   {region.labs.map((lab) => {
-                    const currentIndex = currentImageIndex[lab.id] || 0
-                    const currentImage = lab.images[currentIndex]
                     const totalImages = lab.images.length
                     
                     return (
@@ -378,40 +351,12 @@ function ComputerLabs() {
                         
                         {openLabs[lab.id] && (
                           <div className="lab-details">
-                            <div className="carousel-container">
-                              <img src={currentImage} alt={`${lab.name} - Image ${currentIndex + 1}`} className="lab-full-image" />
-                              
-                              {totalImages > 1 && (
-                                <>
-                                  <button 
-                                    className="carousel-button carousel-button-prev"
-                                    onClick={(e) => prevImage(lab.id, totalImages, e)}
-                                    aria-label="Previous image"
-                                  >
-                                    <ChevronLeft size={32} />
-                                  </button>
-                                  <button 
-                                    className="carousel-button carousel-button-next"
-                                    onClick={(e) => nextImage(lab.id, totalImages, e)}
-                                    aria-label="Next image"
-                                  >
-                                    <ChevronRight size={32} />
-                                  </button>
-                                  <div className="carousel-indicators">
-                                    {lab.images.map((_, index) => (
-                                      <span 
-                                        key={index}
-                                        className={`carousel-dot ${index === currentIndex ? 'active' : ''}`}
-                                        onClick={(e) => {
-                                          e.stopPropagation()
-                                          setCurrentImageIndex(prev => ({ ...prev, [lab.id]: index }))
-                                        }}
-                                      />
-                                    ))}
-                                  </div>
-                                </>
-                              )}
-                            </div>
+                            <OptimizedCarousel 
+                              images={lab.images}
+                              alt={lab.name}
+                              isRTL={isRTL}
+                              className="carousel-container"
+                            />
                             <div className="lab-info">
                               <p><strong>{t('computerLabs.province')}:</strong> {t(`regions.${regionKey}`)}</p>
                               {lab.opening && lab.opening !== 'N/A' && <p><strong>{t('computerLabs.opening')}:</strong> {lab.opening}</p>}

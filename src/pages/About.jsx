@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import SEO from '../components/SEO'
+import OptimizedImage from '../components/OptimizedImage'
 import './About.css'
 
 function About() {
@@ -90,7 +91,14 @@ function About() {
           <div className="team-grid">
             {teamMembers.map((member, index) => (
               <div key={index} className="team-member card">
-                <img src={member.image} alt={member.name} className="member-image" />
+                <OptimizedImage 
+                  src={member.image} 
+                  alt={member.name} 
+                  className="member-image"
+                  loading="lazy"
+                  aspectRatio="1/1"
+                  objectFit="cover"
+                />
                 <div className="member-info">
                   <h3 className="member-name">{member.name}</h3>
                   <p className="member-role">{member.role}</p>

@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 import SEO from '../components/SEO'
+import OptimizedCarousel from '../components/OptimizedCarousel'
 import ProgramNavigation from '../components/ProgramNavigation'
 import './Libraries.css'
 
@@ -9,7 +10,6 @@ function Libraries() {
   const { t, i18n } = useTranslation()
   const baseUrl = import.meta.env.BASE_URL
   const [openLibraries, setOpenLibraries] = useState({})
-  const [currentImageIndex, setCurrentImageIndex] = useState({})
   
   // Check if current language is RTL
   const isRTL = i18n.language === 'fa' || i18n.language === 'ps'
@@ -18,33 +18,6 @@ function Libraries() {
     setOpenLibraries(prev => ({
       ...prev,
       [libraryId]: !prev[libraryId]
-    }))
-    // Reset carousel to first image when opening
-    if (!openLibraries[libraryId]) {
-      setCurrentImageIndex(prev => ({
-        ...prev,
-        [libraryId]: 0
-      }))
-    }
-  }
-
-  const nextImage = (libraryId, totalImages, e) => {
-    e.stopPropagation()
-    // In RTL, "next" means going backwards in the array
-    const direction = isRTL ? -1 : 1
-    setCurrentImageIndex(prev => ({
-      ...prev,
-      [libraryId]: ((prev[libraryId] || 0) + direction + totalImages) % totalImages
-    }))
-  }
-
-  const prevImage = (libraryId, totalImages, e) => {
-    e.stopPropagation()
-    // In RTL, "previous" means going forwards in the array
-    const direction = isRTL ? 1 : -1
-    setCurrentImageIndex(prev => ({
-      ...prev,
-      [libraryId]: ((prev[libraryId] || 0) + direction + totalImages) % totalImages
     }))
   }
 
@@ -241,8 +214,6 @@ function Libraries() {
                 {region.libraries.length > 0 ? (
                   <div className="libraries-grid">
                     {region.libraries.map((library) => {
-                      const currentIndex = currentImageIndex[library.id] || 0
-                      const currentImage = library.images[currentIndex]
                       const totalImages = library.images.length
                       
                       return (
@@ -262,40 +233,12 @@ function Libraries() {
                           
                           {openLibraries[library.id] && (
                             <div className="library-details">
-                              <div className="carousel-container">
-                                <img src={currentImage} alt={`${library.name} - Image ${currentIndex + 1}`} className="library-full-image" />
-                                
-                                {totalImages > 1 && (
-                                  <>
-                                    <button 
-                                      className="carousel-button carousel-button-prev"
-                                      onClick={(e) => prevImage(library.id, totalImages, e)}
-                                      aria-label="Previous image"
-                                    >
-                                      <ChevronLeft size={32} />
-                                    </button>
-                                    <button 
-                                      className="carousel-button carousel-button-next"
-                                      onClick={(e) => nextImage(library.id, totalImages, e)}
-                                      aria-label="Next image"
-                                    >
-                                      <ChevronRight size={32} />
-                                    </button>
-                                    <div className="carousel-indicators">
-                                      {library.images.map((_, index) => (
-                                        <span 
-                                          key={index}
-                                          className={`carousel-dot ${index === currentIndex ? 'active' : ''}`}
-                                          onClick={(e) => {
-                                            e.stopPropagation()
-                                            setCurrentImageIndex(prev => ({ ...prev, [library.id]: index }))
-                                          }}
-                                        />
-                                      ))}
-                                    </div>
-                                  </>
-                                )}
-                              </div>
+                              <OptimizedCarousel 
+                                images={library.images}
+                                alt={library.name}
+                                isRTL={isRTL}
+                                className="carousel-container"
+                              />
                               <div className="library-info">
                                 <p><strong>{t('libraries.province')}:</strong> {t(`regions.${regionKey}`)}</p>
                                 {library.opening && library.opening !== 'N/A' && <p><strong>{t('libraries.opening')}:</strong> {library.opening}</p>}

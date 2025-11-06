@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import OptimizedImage from '../components/OptimizedImage'
 import './Home.css'
 
 function Home() {
@@ -82,7 +83,14 @@ function Home() {
             {programs.map((program, index) => (
               <Link to={program.link} key={index} className="program-card-with-image">
                 <div className="program-image-wrapper">
-                  <img src={program.image} alt={program.title} className="program-image" />
+                  <OptimizedImage 
+                    src={program.image} 
+                    alt={program.title} 
+                    className="program-image"
+                    loading="lazy"
+                    aspectRatio="4/3"
+                    objectFit="cover"
+                  />
                 </div>
                 <h3 className="program-title">{program.title}</h3>
               </Link>

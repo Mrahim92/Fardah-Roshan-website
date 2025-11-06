@@ -324,18 +324,14 @@
   }
   
   .donate-button {
-    padding: 6px 10px;
-    font-size: 0.75rem;
+    padding: 8px 12px;
+    font-size: 0.85rem;
     gap: 4px;
   }
   
   .donate-button svg {
-    width: 14px;
-    height: 14px;
-  }
-
-  .donate-button span {
-    display: none; /* Hide "Donate" text, just show heart icon on very small screens */
+    width: 16px;
+    height: 16px;
   }
 
   .header-actions {

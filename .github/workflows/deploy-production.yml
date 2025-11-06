@@ -35,7 +35,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /public_html/
+          server-dir: /home/fardkeyq/public_html/
           dangerous-clean-slate: false  # Don't delete all files first
           exclude: |
             **/.git*

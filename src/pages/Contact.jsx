@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { Mail, Send } from 'lucide-react'
 import './Contact.css'
 
 function Contact() {
@@ -47,23 +47,7 @@ function Contact() {
                   <Mail size={24} />
                   <div>
                     <h4>{t('contact.info.email')}</h4>
-                    <p>info@fardahroshan.org</p>
-                  </div>
-                </div>
-
-                <div className="contact-item">
-                  <Phone size={24} />
-                  <div>
-                    <h4>{t('contact.info.phone')}</h4>
-                    <p>+93 XXX XXX XXX</p>
-                  </div>
-                </div>
-
-                <div className="contact-item">
-                  <MapPin size={24} />
-                  <div>
-                    <h4>{t('contact.info.address')}</h4>
-                    <p>{t('contact.info.location')}</p>
+                    <a href="mailto:info@fardahroshan.org">info@fardahroshan.org</a>
                   </div>
                 </div>
               </div>

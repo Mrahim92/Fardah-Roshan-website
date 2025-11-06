@@ -5,10 +5,13 @@ import ProgramNavigation from '../components/ProgramNavigation'
 import './OnlineClasses.css'
 
 function OnlineClasses() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const baseUrl = import.meta.env.BASE_URL
   const [openClasses, setOpenClasses] = useState({})
   const [currentImageIndex, setCurrentImageIndex] = useState({})
+  
+  // Check if current language is RTL
+  const isRTL = i18n.language === 'fa' || i18n.language === 'ps'
 
   const toggleClass = (classId) => {
     setOpenClasses(prev => ({
@@ -26,17 +29,19 @@ function OnlineClasses() {
 
   const nextImage = (classId, totalImages, e) => {
     e.stopPropagation()
+    const direction = isRTL ? -1 : 1
     setCurrentImageIndex(prev => ({
       ...prev,
-      [classId]: ((prev[classId] || 0) + 1) % totalImages
+      [classId]: ((prev[classId] || 0) + direction + totalImages) % totalImages
     }))
   }
 
   const prevImage = (classId, totalImages, e) => {
     e.stopPropagation()
+    const direction = isRTL ? 1 : -1
     setCurrentImageIndex(prev => ({
       ...prev,
-      [classId]: ((prev[classId] || 0) - 1 + totalImages) % totalImages
+      [classId]: ((prev[classId] || 0) + direction + totalImages) % totalImages
     }))
   }
 

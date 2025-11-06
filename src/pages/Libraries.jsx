@@ -5,10 +5,13 @@ import ProgramNavigation from '../components/ProgramNavigation'
 import './Libraries.css'
 
 function Libraries() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const baseUrl = import.meta.env.BASE_URL
   const [openLibraries, setOpenLibraries] = useState({})
   const [currentImageIndex, setCurrentImageIndex] = useState({})
+  
+  // Check if current language is RTL
+  const isRTL = i18n.language === 'fa' || i18n.language === 'ps'
 
   const toggleLibrary = (libraryId) => {
     setOpenLibraries(prev => ({
@@ -26,27 +29,31 @@ function Libraries() {
 
   const nextImage = (libraryId, totalImages, e) => {
     e.stopPropagation()
+    // In RTL, "next" means going backwards in the array
+    const direction = isRTL ? -1 : 1
     setCurrentImageIndex(prev => ({
       ...prev,
-      [libraryId]: ((prev[libraryId] || 0) + 1) % totalImages
+      [libraryId]: ((prev[libraryId] || 0) + direction + totalImages) % totalImages
     }))
   }
 
   const prevImage = (libraryId, totalImages, e) => {
     e.stopPropagation()
+    // In RTL, "previous" means going forwards in the array
+    const direction = isRTL ? 1 : -1
     setCurrentImageIndex(prev => ({
       ...prev,
-      [libraryId]: ((prev[libraryId] || 0) - 1 + totalImages) % totalImages
+      [libraryId]: ((prev[libraryId] || 0) + direction + totalImages) % totalImages
     }))
   }
 
   const regions = {
     herat: {
-      name: 'Herat',
+      name: t('regions.herat'),
       libraries: [
         {
           id: 'herat1',
-          name: 'Herat Jeabrieal Library',
+          name: t('libraryNames.heratGabriel'),
             thumbnail: `${baseUrl}Libraries/herat-libraries/Herat Jeabrieal Library/img_1739608864521_0-1739608888286-picture.webp`,
           opening: 'N/A',
           provided: 'N/A',
@@ -62,7 +69,7 @@ function Libraries() {
         },
         {
           id: 'herat2',
-          name: 'Herat Khatimul Anbia Library',
+          name: t('libraryNames.heratKhatemol'),
             thumbnail: `${baseUrl}Libraries/herat-libraries/Herat Khatimul Anbia Library/img_1744795342855_0-1744795359509-picture.webp`,
           opening: 'N/A',
           provided: 'N/A',
@@ -80,11 +87,11 @@ function Libraries() {
       ]
     },
     kandahar: {
-      name: 'Kandahar',
+      name: t('regions.kandahar'),
       libraries: [
         {
           id: 'kandahar1',
-          name: 'Kandahar District Nine Library',
+          name: t('libraryNames.kandaharNine'),
             thumbnail: `${baseUrl}Libraries/kandahar-libraries/Kandahar District Nine Library/img_1739615136005_0-1739615142764-picture.webp`,
           opening: 'N/A',
           provided: 'N/A',
@@ -99,55 +106,40 @@ function Libraries() {
         },
         {
           id: 'kandahar2',
-          name: 'Kandahar Khail Library',
-            thumbnail: `${baseUrl}Libraries/kandahar-libraries/Kandahar Khail Library/WhatsApp Image 2025-01-22 at 16-1739606823302-picture.webp`,
+          name: t('libraryNames.kandaharKhail'),
+            thumbnail: `${baseUrl}Libraries/kandahar-libraries/Kandahar Galacha Khel Library/WhatsApp Image 2025-01-22 at 16-1739606823302-picture.webp`,
           opening: 'N/A',
           provided: 'N/A',
           books: 'N/A',
           images: [
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Khail Library/WhatsApp Image 2025-01-22 at 16-1739606823302-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Khail Library/img_1739607218635_0-1739607238476-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Khail Library/img_1739607218635_1-1739607238481-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Khail Library/img_1739607218636_2-1739607238589-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Khail Library/img_1739607218636_4-1739607238689-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Khail Library/img_1739607218636_5-1739607238690-picture.webp`,
+              `${baseUrl}Libraries/kandahar-libraries/Kandahar Galacha Khel Library/WhatsApp Image 2025-01-22 at 16-1739606823302-picture.webp`,
+              `${baseUrl}Libraries/kandahar-libraries/Kandahar Galacha Khel Library/img_1739607218635_0-1739607238476-picture.webp`,
+              `${baseUrl}Libraries/kandahar-libraries/Kandahar Galacha Khel Library/img_1739607218635_1-1739607238481-picture.webp`,
+              `${baseUrl}Libraries/kandahar-libraries/Kandahar Galacha Khel Library/img_1739607218636_2-1739607238589-picture.webp`,
+              `${baseUrl}Libraries/kandahar-libraries/Kandahar Galacha Khel Library/img_1739607218636_4-1739607238689-picture.webp`,
+              `${baseUrl}Libraries/kandahar-libraries/Kandahar Galacha Khel Library/img_1739607218636_5-1739607238690-picture.webp`,
           ]
         },
         {
           id: 'kandahar3',
-          name: 'Kandahar Mirwais Mina Library',
-            thumbnail: `${baseUrl}Libraries/kandahar-libraries/Kandahar Mirwais Mina Library/img_1739605929297_1-1739605941113-picture.webp`,
+          name: t('libraryNames.kandaharDistrictThree'),
+            thumbnail: `${baseUrl}Libraries/kandahar-libraries/Kandahar District Three Library/img_1739605929297_1-1739605941113-picture.webp`,
           opening: 'N/A',
           provided: 'N/A',
           books: 'N/A',
           images: [
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Mirwais Mina Library/WhatsApp Image 2024-09-14 at 17-1739605498251-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Mirwais Mina Library/img_1739605929297_0-1739605941084-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Mirwais Mina Library/img_1739605929297_1-1739605941113-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Mirwais Mina Library/img_1739605929297_2-1739605941131-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Mirwais Mina Library/img_1739605929297_3-1739605941145-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Mirwais Mina Library/img_1739605929297_4-1739605941175-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Mirwais Mina Library/img_1739605929298_5-1739605941189-picture.webp`,
+              `${baseUrl}Libraries/kandahar-libraries/Kandahar District Three Library/WhatsApp Image 2024-09-14 at 17-1739605498251-picture.webp`,
+              `${baseUrl}Libraries/kandahar-libraries/Kandahar District Three Library/img_1739605929297_0-1739605941084-picture.webp`,
+              `${baseUrl}Libraries/kandahar-libraries/Kandahar District Three Library/img_1739605929297_1-1739605941113-picture.webp`,
+              `${baseUrl}Libraries/kandahar-libraries/Kandahar District Three Library/img_1739605929297_2-1739605941131-picture.webp`,
+              `${baseUrl}Libraries/kandahar-libraries/Kandahar District Three Library/img_1739605929297_3-1739605941145-picture.webp`,
+              `${baseUrl}Libraries/kandahar-libraries/Kandahar District Three Library/img_1739605929297_4-1739605941175-picture.webp`,
+              `${baseUrl}Libraries/kandahar-libraries/Kandahar District Three Library/img_1739605929298_5-1739605941189-picture.webp`,
           ]
         },
         {
           id: 'kandahar4',
-          name: 'Kandahar Topkhana Library',
-            thumbnail: `${baseUrl}Libraries/kandahar-libraries/Kandahar Topkhana Library/WhatsApp Image 2024-08-15 at 09-1739597041986-picture.webp`,
-          opening: 'N/A',
-          provided: 'N/A',
-          books: 'N/A',
-          images: [
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Topkhana Library/WhatsApp Image 2024-08-15 at 09-1739597041986-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Topkhana Library/img_1739597425945_0-1739597443234-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Topkhana Library/img_1739597425946_1-1739597443270-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Topkhana Library/img_1739597425946_2-1739597443290-picture.webp`,
-              `${baseUrl}Libraries/kandahar-libraries/Kandahar Topkhana Library/img_1739597425946_3-1739597443302-picture.webp`,
-          ]
-        },
-        {
-          id: 'kandahar5',
-          name: 'Karte Malimin Library',
+          name: t('libraryNames.karteMalimin'),
             thumbnail: `${baseUrl}Libraries/kandahar-libraries/Karte Malimin Library/img_1739609235735_0-1739609256710-picture.webp`,
           opening: 'N/A',
           provided: 'N/A',
@@ -161,11 +153,11 @@ function Libraries() {
       ]
     },
     helmand: {
-      name: 'Helmand',
+      name: t('regions.helmand'),
       libraries: [
         {
           id: 'helmand1',
-          name: 'Helmand Beit One Library',
+          name: t('libraryNames.helmandBeitOne'),
             thumbnail: `${baseUrl}Libraries/helmand-libraries/Helmand Beit One Library/img_1739607856347_0-1739607865659-picture.webp`,
           opening: 'N/A',
           provided: 'N/A',
@@ -181,11 +173,11 @@ function Libraries() {
       ]
     },
     bamian: {
-      name: 'Bamian',
+      name: t('regions.bamian'),
       libraries: [
         {
           id: 'bamian1',
-          name: 'Bamian Library',
+          name: t('libraryNames.bamianOldCity'),
             thumbnail: `${baseUrl}Libraries/bamian-libraries/Bamian Library/img_1744795712557_0-1744795717182-picture.webp`,
           opening: 'N/A',
           provided: 'N/A',
@@ -200,11 +192,11 @@ function Libraries() {
       ]
     },
     ghazni: {
-      name: 'Ghazni',
+      name: t('regions.ghazni'),
       libraries: [
         {
           id: 'ghazni1',
-          name: 'Ghazni Jaghori Library',
+          name: t('libraryNames.ghazniJaghori'),
             thumbnail: `${baseUrl}Libraries/ghazni-libraries/Ghazni Jaghori Library/WhatsApp Image 2024-09-16 at 09-1739606037270-picture.webp`,
           opening: 'N/A',
           provided: 'N/A',
@@ -227,8 +219,8 @@ function Libraries() {
     <div className="libraries-page">
       <section className="page-hero">
         <div className="container">
-          <h1>Libraries</h1>
-          <p>Promoting literacy and knowledge through accessible library resources across Afghanistan</p>
+          <h1>{t('programs.libraries')}</h1>
+          <p>{t('libraries.subtitle')}</p>
         </div>
       </section>
 
@@ -298,12 +290,12 @@ function Libraries() {
                                 )}
                               </div>
                               <div className="library-info">
-                                <p><strong>Province:</strong> {region.name}</p>
-                                {library.opening && library.opening !== 'N/A' && <p><strong>Opening:</strong> {library.opening}</p>}
-                                {library.provided && library.provided !== 'N/A' && <p><strong>Provided:</strong> {library.provided}</p>}
-                                {library.books && library.books !== 'N/A' && <p><strong>Books:</strong> {library.books}</p>}
-                                <p><strong>Status:</strong> Active</p>
-                                <p><strong>Gallery:</strong> {totalImages} {totalImages === 1 ? 'photo' : 'photos'}</p>
+                                <p><strong>{t('libraries.province')}:</strong> {t(`regions.${regionKey}`)}</p>
+                                {library.opening && library.opening !== 'N/A' && <p><strong>{t('libraries.opening')}:</strong> {library.opening}</p>}
+                                {library.provided && library.provided !== 'N/A' && <p><strong>{t('libraries.provided')}:</strong> {library.provided}</p>}
+                                {library.books && library.books !== 'N/A' && <p><strong>{t('libraries.books')}:</strong> {library.books}</p>}
+                                <p><strong>{t('libraries.status')}:</strong> {t('libraries.active')}</p>
+                                <p><strong>{t('libraries.gallery')}:</strong> {totalImages} {totalImages === 1 ? t('libraries.photo') : t('libraries.photos')}</p>
                               </div>
                             </div>
                           )}

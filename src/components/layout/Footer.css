@@ -102,11 +102,41 @@
   color: #ccc;
 }
 
+.footer-contact a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #00C2CB;
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
   text-align: center;
   color: #999;
+}
+
+.footer-legal {
+  margin-bottom: 16px;
+}
+
+.footer-legal p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.footer-legal strong {
+  color: #FFDE00;
+  font-weight: 600;
+}
+
+.copyright {
+  opacity: 0.7;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 968px) {

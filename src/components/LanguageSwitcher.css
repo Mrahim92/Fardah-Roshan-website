@@ -7,20 +7,19 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: #f5f5f5;
-  border: none;
-  border-radius: 6px;
+  background: white;
+  border: 2px solid #00C2CB;
+  border-radius: 8px;
+  color: #00C2CB;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
   font-size: 0.95rem;
-  transition: background 0.3s ease;
 }
 
 .language-button:hover {
-  background: #e0e0e0;
-}
-
-.current-lang {
-  font-weight: 500;
+  background: #00C2CB;
+  color: white;
 }
 
 .language-dropdown {
@@ -29,16 +28,17 @@
   right: 0;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-  min-width: 150px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
-  z-index: 100;
+  min-width: 160px;
+  z-index: 1000;
 }
 
-.language-switcher:hover .language-dropdown {
+.language-dropdown.open {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -48,45 +48,46 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 100%;
   padding: 12px 16px;
-  background: none;
-  border: none;
-  text-align: left;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.2s ease;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 0.95rem;
 }
 
 .language-option:hover {
-  background: #f5f5f5;
+  background: #f0f0f0;
 }
 
 .language-option.active {
-  background: #e3f2fd;
+  background: #e8f8f9;
   color: #00C2CB;
+  font-weight: 600;
 }
 
-.lang-flag {
-  font-size: 1.25rem;
+.language-flag {
+  font-size: 1.2rem;
 }
 
-.lang-name {
-  font-weight: 500;
-}
-
-/* RTL adjustments */
-[dir="rtl"] .language-dropdown {
-  right: auto;
-  left: 0;
-}
-
-@media (max-width: 480px) {
-  .current-lang {
-    display: none;
-  }
-
+@media (max-width: 768px) {
   .language-button {
-    padding: 8px 12px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .language-dropdown {
+    min-width: 140px;
+  }
+
+  .language-option {
+    padding: 10px 14px;
+    font-size: 0.9rem;
   }
 }
+
+
+
 

@@ -5,10 +5,13 @@ import ProgramNavigation from '../components/ProgramNavigation'
 import './ComputerLabs.css'
 
 function ComputerLabs() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const baseUrl = import.meta.env.BASE_URL
   const [openLabs, setOpenLabs] = useState({})
   const [currentImageIndex, setCurrentImageIndex] = useState({})
+  
+  // Check if current language is RTL
+  const isRTL = i18n.language === 'fa' || i18n.language === 'ps'
 
   const toggleLab = (labId) => {
     setOpenLabs(prev => ({
@@ -26,17 +29,19 @@ function ComputerLabs() {
 
   const nextImage = (labId, totalImages, e) => {
     e.stopPropagation()
+    const direction = isRTL ? -1 : 1
     setCurrentImageIndex(prev => ({
       ...prev,
-      [labId]: ((prev[labId] || 0) + 1) % totalImages
+      [labId]: ((prev[labId] || 0) + direction + totalImages) % totalImages
     }))
   }
 
   const prevImage = (labId, totalImages, e) => {
     e.stopPropagation()
+    const direction = isRTL ? 1 : -1
     setCurrentImageIndex(prev => ({
       ...prev,
-      [labId]: ((prev[labId] || 0) - 1 + totalImages) % totalImages
+      [labId]: ((prev[labId] || 0) + direction + totalImages) % totalImages
     }))
   }
 
@@ -331,8 +336,8 @@ function ComputerLabs() {
     <div className="computer-labs-page">
       <section className="page-hero">
         <div className="container">
-          <h1>Computer Labs</h1>
-          <p>Empowering students with technology and digital literacy across Afghanistan</p>
+          <h1>{t('programs.computerLabs')}</h1>
+          <p>{t('computerLabs.subtitle')}</p>
         </div>
       </section>
 
@@ -401,14 +406,14 @@ function ComputerLabs() {
                               )}
                             </div>
                             <div className="lab-info">
-                              <p><strong>Province:</strong> {region.name}</p>
-                              {lab.opening && lab.opening !== 'N/A' && <p><strong>Opening:</strong> {lab.opening}</p>}
-                              {lab.provided && lab.provided !== 'N/A' && <p><strong>Provided:</strong> {lab.provided}</p>}
-                              {lab.femaleStudents && lab.femaleStudents !== 'N/A' && <p><strong>Female Students:</strong> {lab.femaleStudents}</p>}
-                              {lab.maleStudents && lab.maleStudents !== 'N/A' && <p><strong>Male Students:</strong> {lab.maleStudents}</p>}
-                              {lab.fundedPrograms && lab.fundedPrograms !== 'N/A' && <p><strong>Funded Programs:</strong> {lab.fundedPrograms}</p>}
-                              <p><strong>Status:</strong> Active</p>
-                              <p><strong>Gallery:</strong> {totalImages} {totalImages === 1 ? 'photo' : 'photos'}</p>
+                              <p><strong>{t('computerLabs.province')}:</strong> {t(`regions.${regionKey}`)}</p>
+                              {lab.opening && lab.opening !== 'N/A' && <p><strong>{t('computerLabs.opening')}:</strong> {lab.opening}</p>}
+                              {lab.provided && lab.provided !== 'N/A' && <p><strong>{t('computerLabs.provided')}:</strong> {lab.provided}</p>}
+                              {lab.femaleStudents && lab.femaleStudents !== 'N/A' && <p><strong>{t('computerLabs.femaleStudents')}:</strong> {lab.femaleStudents}</p>}
+                              {lab.maleStudents && lab.maleStudents !== 'N/A' && <p><strong>{t('computerLabs.maleStudents')}:</strong> {lab.maleStudents}</p>}
+                              {lab.fundedPrograms && lab.fundedPrograms !== 'N/A' && <p><strong>{t('computerLabs.fundedPrograms')}:</strong> {lab.fundedPrograms}</p>}
+                              <p><strong>{t('computerLabs.status')}:</strong> {t('computerLabs.active')}</p>
+                              <p><strong>{t('computerLabs.gallery')}:</strong> {totalImages} {totalImages === 1 ? t('computerLabs.photo') : t('computerLabs.photos')}</p>
                             </div>
                           </div>
                         )}

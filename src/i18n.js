@@ -75,6 +75,84 @@ const resources = {
           communities: 'Communities Served',
         },
       },
+      // Computer Labs
+      computerLabs: {
+        subtitle: 'Empowering students with technology and digital literacy across Afghanistan',
+        province: 'Province',
+        opening: 'Opening',
+        provided: 'Provided',
+        femaleStudents: 'Female Students',
+        maleStudents: 'Male Students',
+        fundedPrograms: 'Funded Programs',
+        status: 'Status',
+        active: 'Active',
+        gallery: 'Gallery',
+        photo: 'photo',
+        photos: 'photos',
+      },
+      // Libraries
+      libraries: {
+        subtitle: 'Fostering literacy and love for reading across Afghanistan',
+        province: 'Province',
+        opening: 'Opening',
+        provided: 'Provided',
+        books: 'Books',
+        status: 'Status',
+        active: 'Active',
+        gallery: 'Gallery',
+        photo: 'photo',
+        photos: 'photos',
+      },
+      // Regions
+      regions: {
+        kandahar: 'Kandahar',
+        helmand: 'Helmand',
+        herat: 'Herat',
+        bamian: 'Bamian',
+        ghazni: 'Ghazni',
+      },
+      // Library Names (from CSV dictionary)
+      libraryNames: {
+        heratGabriel: 'Gabriel Herat',
+        heratKhatemol: 'Shahrak-e-Khatemol Anbia',
+        kandaharNine: 'Loyah Wala',
+        kandaharKhail: 'Galacha Khel',
+        kandaharDistrictThree: 'District 3',
+        karteMalimin: 'Carte Malimin',
+        helmandBeitOne: 'Beit One Lashkargah',
+        bamianOldCity: 'Bamiyan Old City',
+        ghazniJaghori: 'Bazaar Sange Masha',
+        daykundi: 'Neli New City',
+      },
+      // Donate
+      donate: {
+        title: 'Donate to Fardah Roshan Academy',
+        subtitle: 'Your donation helps expand literacy, education, and opportunity across Afghanistan.',
+        chooseAmount: 'Choose an amount',
+        otherAmount: 'Other amount',
+        donateNow: 'Donate Now',
+        secureNotice: 'You will be redirected to our secure PayPal page.',
+        yourImpact: 'Your Impact',
+        impact: {
+          line1: 'Equip computer labs and libraries for students',
+          line2: 'Support teachers and learning resources',
+          line3: 'Expand programs to underserved regions',
+        },
+        alreadyDonated: 'I already donated',
+        errors: {
+          enterAmount: 'Please enter an amount.',
+          invalidAmount: 'Please enter a valid amount greater than 0.',
+          twoDecimals: 'Use up to two decimal places (e.g., 25.50).',
+        },
+      },
+      // Thank You
+      thankYou: {
+        title: 'Thank You for Your Donation',
+        subtitle: 'Your support helps us deliver literacy and learning opportunities.',
+        lead: 'We appreciate your generosity. Together, we are making a brighter future possible.',
+        backHome: 'Back to Home',
+        viewPrograms: 'See Our Programs',
+      },
       // About
       about: {
         title: 'About Fardah Roshan Academy',
@@ -249,6 +327,84 @@ const resources = {
           communities: 'جوامع خدمت شده',
         },
       },
+      // Computer Labs (Farsi)
+      computerLabs: {
+        subtitle: 'توانمندسازی دانش‌آموزان با فناوری و سوادآموزی دیجیتال در سراسر افغانستان',
+        province: 'ولایت',
+        opening: 'افتتاح',
+        provided: 'ارائه شده',
+        femaleStudents: 'دانش‌آموزان دختر',
+        maleStudents: 'دانش‌آموزان پسر',
+        fundedPrograms: 'برنامه‌های تأمین مالی شده',
+        status: 'وضعیت',
+        active: 'فعال',
+        gallery: 'گالری',
+        photo: 'عکس',
+        photos: 'عکس‌ها',
+      },
+      // Libraries (Farsi)
+      libraries: {
+        subtitle: 'تقویت سوادآموزی و عشق به خواندن در سراسر افغانستان',
+        province: 'ولایت',
+        opening: 'افتتاح',
+        provided: 'ارائه شده',
+        books: 'کتاب‌ها',
+        status: 'وضعیت',
+        active: 'فعال',
+        gallery: 'گالری',
+        photo: 'عکس',
+        photos: 'عکس‌ها',
+      },
+      // Regions (Farsi)
+      regions: {
+        kandahar: 'قندهار',
+        helmand: 'هلمند',
+        herat: 'هرات',
+        bamian: 'بامیان',
+        ghazni: 'غزنی',
+      },
+      // Library Names (from CSV dictionary - Farsi)
+      libraryNames: {
+        heratGabriel: 'جبرائیل',
+        heratKhatemol: 'شهرک خاتم الاانبیا',
+        kandaharNine: 'لویه واله',
+        kandaharKhail: 'قلاچه خیل',
+        kandaharDistrictThree: 'ناحیه ۳',
+        karteMalimin: 'کارته معلمین دوراهی',
+        helmandBeitOne: 'بیت ون لشکرګاه',
+        bamianOldCity: 'شهر کهنه بامیان',
+        ghazniJaghori: 'بازار سنګ ماشه',
+        daykundi: 'شهر نو نیلی',
+      },
+      // Donate (Farsi)
+      donate: {
+        title: 'حمایت از آکادمی فرده روشن',
+        subtitle: 'کمک شما به گسترش سوادآموزی، آموزش و فرصت‌ها در سراسر افغانستان یاری می‌رساند.',
+        chooseAmount: 'مبلغ را انتخاب کنید',
+        otherAmount: 'مبلغ دیگر',
+        donateNow: 'اکنون کمک کنید',
+        secureNotice: 'به صفحه امن پی‌پال منتقل خواهید شد.',
+        yourImpact: 'تأثیر شما',
+        impact: {
+          line1: 'تجهیز آزمایشگاه‌های کامپیوتر و کتابخانه‌ها برای دانش‌آموزان',
+          line2: 'حمایت از معلمان و منابع آموزشی',
+          line3: 'گسترش برنامه‌ها به مناطق محروم',
+        },
+        alreadyDonated: 'قبلاً کمک کرده‌ام',
+        errors: {
+          enterAmount: 'لطفاً مبلغی وارد کنید.',
+          invalidAmount: 'لطفاً مبلغی معتبر بیشتر از صفر وارد کنید.',
+          twoDecimals: 'حداکثر دو رقم اعشار استفاده کنید (مثلاً 25.50).',
+        },
+      },
+      // Thank You (Farsi)
+      thankYou: {
+        title: 'از کمک شما سپاسگزاریم',
+        subtitle: 'حمایت شما به ما کمک می‌کند فرصت‌های سوادآموزی و یادگیری را فراهم کنیم.',
+        lead: 'از سخاوت شما قدردانی می‌کنیم. با هم آینده‌ای روشن‌تر را ممکن می‌سازیم.',
+        backHome: 'بازگشت به خانه',
+        viewPrograms: 'مشاهده برنامه‌ها',
+      },
       // About (Farsi)
       about: {
         title: 'درباره آکادمی فرده روشن',
@@ -422,6 +578,84 @@ const resources = {
           teachers: 'ښوونکي روزل شوي',
           communities: 'ټولنې خدمت شوې',
         },
+      },
+      // Computer Labs (Pashto)
+      computerLabs: {
+        subtitle: 'په افغانستان کې د ټیکنالوژۍ او ډیجیټل سوادمندۍ سره د زده کوونکو پیاوړتیا',
+        province: 'ولایت',
+        opening: 'افتتاح',
+        provided: 'چمتو شوی',
+        femaleStudents: 'ښځینه زده کوونکي',
+        maleStudents: 'نارینه زده کوونکي',
+        fundedPrograms: 'تمویل شوي پروګرامونه',
+        status: 'حالت',
+        active: 'فعال',
+        gallery: 'ګالري',
+        photo: 'عکس',
+        photos: 'عکسونه',
+      },
+      // Libraries (Pashto)
+      libraries: {
+        subtitle: 'په افغانستان کې د سوادمندۍ او لوستلو مینې پیاوړتیا',
+        province: 'ولایت',
+        opening: 'افتتاح',
+        provided: 'چمتو شوی',
+        books: 'کتابونه',
+        status: 'حالت',
+        active: 'فعال',
+        gallery: 'ګالري',
+        photo: 'عکس',
+        photos: 'عکسونه',
+      },
+      // Regions (Pashto)
+      regions: {
+        kandahar: 'کندهار',
+        helmand: 'هلمند',
+        herat: 'هرات',
+        bamian: 'بامیان',
+        ghazni: 'غزني',
+      },
+      // Library Names (from CSV dictionary - Pashto)
+      libraryNames: {
+        heratGabriel: 'جبرائیل',
+        heratKhatemol: 'شهرک خاتم الاانبیا',
+        kandaharNine: 'لویه واله',
+        kandaharKhail: 'قلاچه خیل',
+        kandaharDistrictThree: 'ناحیه ۳',
+        karteMalimin: 'کارته معلمین دوراهی',
+        helmandBeitOne: 'بیت ون لشکرګاه',
+        bamianOldCity: 'شهر کهنه بامیان',
+        ghazniJaghori: 'بازار سنګ ماشه',
+        daykundi: 'شهر نو نیلی',
+      },
+      // Donate (Pashto)
+      donate: {
+        title: 'د فرده روشن اکاډمۍ ملاتړ وکړئ',
+        subtitle: 'ستاسو مرسته په افغانستان کې د سوادمندۍ، زده کړې او فرصتونو په پراختیا کې مرسته کوي.',
+        chooseAmount: 'یوه اندازه وټاکئ',
+        otherAmount: 'بله اندازه',
+        donateNow: 'اوس مرسته وکړئ',
+        secureNotice: 'تاسو به زموږ د خوندي PayPal مخ ته ولېږدول شئ.',
+        yourImpact: 'ستاسو اغېز',
+        impact: {
+          line1: 'د زده کوونکو لپاره د کمپیوټر لابراتوارونو او کتابتونونو تجهیز',
+          line2: 'د ښوونکو او تعلیمي سرچینو ملاتړ',
+          line3: 'برنامې تر محرومو سیمو پورې پراخول',
+        },
+        alreadyDonated: 'زه مخکې مرسته کړې ده',
+        errors: {
+          enterAmount: 'لطفاً اندازه ولیکئ.',
+          invalidAmount: 'مهرباني وکړئ له صفر څخه لوړه اعتبار وړ اندازه ولیکئ.',
+          twoDecimals: 'تر دوو اعشاري 숫رو پورې اجازه ده (لکه 25.50).',
+        },
+      },
+      // Thank You (Pashto)
+      thankYou: {
+        title: 'ستاسو له مرستې مننه',
+        subtitle: 'ستاسو ملاتړ موږ سره د سوادمندۍ او زده کړې فرصتونه برابرولو کې مرسته کوي.',
+        lead: 'ستاسو له سخاوت څخه منندوی یو. یوځای موږ روښانه راتلونکی ممکنوو.',
+        backHome: 'کور ته ستنېدل',
+        viewPrograms: 'زموږ پروګرامونه وګورئ',
       },
       // About (Pashto)
       about: {

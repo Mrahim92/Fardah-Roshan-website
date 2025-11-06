@@ -45,6 +45,18 @@
   color: #666;
 }
 
+.contact-item a {
+  color: #00C2CB;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #00A0A8;
+  text-decoration: underline;
+}
+
 .contact-form {
   padding: 40px;
 }

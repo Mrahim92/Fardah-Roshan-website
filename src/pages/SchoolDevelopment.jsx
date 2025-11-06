@@ -5,10 +5,13 @@ import ProgramNavigation from '../components/ProgramNavigation'
 import './SchoolDevelopment.css'
 
 function SchoolDevelopment() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const baseUrl = import.meta.env.BASE_URL
   const [openPrograms, setOpenPrograms] = useState({})
   const [currentImageIndex, setCurrentImageIndex] = useState({})
+  
+  // Check if current language is RTL
+  const isRTL = i18n.language === 'fa' || i18n.language === 'ps'
 
   const toggleProgram = (programId) => {
     setOpenPrograms(prev => ({
@@ -26,17 +29,19 @@ function SchoolDevelopment() {
 
   const nextImage = (programId, totalImages, e) => {
     e.stopPropagation()
+    const direction = isRTL ? -1 : 1
     setCurrentImageIndex(prev => ({
       ...prev,
-      [programId]: ((prev[programId] || 0) + 1) % totalImages
+      [programId]: ((prev[programId] || 0) + direction + totalImages) % totalImages
     }))
   }
 
   const prevImage = (programId, totalImages, e) => {
     e.stopPropagation()
+    const direction = isRTL ? 1 : -1
     setCurrentImageIndex(prev => ({
       ...prev,
-      [programId]: ((prev[programId] || 0) - 1 + totalImages) % totalImages
+      [programId]: ((prev[programId] || 0) + direction + totalImages) % totalImages
     }))
   }
 

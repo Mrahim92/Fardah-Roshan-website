@@ -6,13 +6,14 @@ import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
-import Programs from './pages/Programs'
 import ComputerLabs from './pages/ComputerLabs'
 import Libraries from './pages/Libraries'
 import Microschools from './pages/Microschools'
 import OnlineClasses from './pages/OnlineClasses'
 import StudentSupport from './pages/StudentSupport'
 import SchoolDevelopment from './pages/SchoolDevelopment'
+import Donate from './pages/Donate'
+import ThankYou from './pages/ThankYou'
 import Contact from './pages/Contact'
 import './App.css'
 
@@ -33,13 +34,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/programs" element={<Programs />} />
           <Route path="/computer-labs" element={<ComputerLabs />} />
           <Route path="/libraries" element={<Libraries />} />
           <Route path="/microschools" element={<Microschools />} />
           <Route path="/online-classes" element={<OnlineClasses />} />
           <Route path="/student-support" element={<StudentSupport />} />
           <Route path="/school-development" element={<SchoolDevelopment />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

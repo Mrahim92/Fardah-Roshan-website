@@ -5,10 +5,13 @@ import ProgramNavigation from '../components/ProgramNavigation'
 import './Microschools.css'
 
 function Microschools() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const baseUrl = import.meta.env.BASE_URL
   const [openSemesters, setOpenSemesters] = useState({})
   const [currentImageIndex, setCurrentImageIndex] = useState({})
+  
+  // Check if current language is RTL
+  const isRTL = i18n.language === 'fa' || i18n.language === 'ps'
 
   const toggleSemester = (semesterId) => {
     setOpenSemesters(prev => ({
@@ -26,17 +29,19 @@ function Microschools() {
 
   const nextImage = (semesterId, totalImages, e) => {
     e.stopPropagation()
+    const direction = isRTL ? -1 : 1
     setCurrentImageIndex(prev => ({
       ...prev,
-      [semesterId]: ((prev[semesterId] || 0) + 1) % totalImages
+      [semesterId]: ((prev[semesterId] || 0) + direction + totalImages) % totalImages
     }))
   }
 
   const prevImage = (semesterId, totalImages, e) => {
     e.stopPropagation()
+    const direction = isRTL ? 1 : -1
     setCurrentImageIndex(prev => ({
       ...prev,
-      [semesterId]: ((prev[semesterId] || 0) - 1 + totalImages) % totalImages
+      [semesterId]: ((prev[semesterId] || 0) + direction + totalImages) % totalImages
     }))
   }
 

@@ -1,0 +1,43 @@
+.thankyou-page .page-hero { background: linear-gradient(135deg, #00C2CB, #00A0A8); color: white; padding: 80px 0 60px; text-align: center; }
+.thankyou-page .page-hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.thankyou-page .page-hero p { font-size: 1.15rem; max-width: 700px; margin: 0 auto; }
+
+.thankyou-page .card { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 32px; max-width: 800px; margin: 0 auto; text-align: center; }
+
+.donation-details { background: #f0f9fa; border-radius: 10px; padding: 24px; margin-bottom: 30px; }
+.greeting { font-size: 1.2rem; color: #333; font-weight: 600; margin-bottom: 16px; }
+.amount-display { display: flex; justify-content: center; align-items: center; gap: 12px; margin: 16px 0; }
+.amount-display .label { color: #666; font-size: 1rem; }
+.amount-display .value { color: #00C2CB; font-size: 2rem; font-weight: 700; }
+.transaction { color: #888; font-size: 0.85rem; margin-top: 12px; }
+
+.lead { font-size: 1.15rem; color: #333; margin: 20px 0; }
+
+.impact-message, .next-steps { text-align: left; background: #f9f9f9; padding: 20px; border-radius: 10px; margin: 24px 0; }
+.impact-message h3, .next-steps h3 { margin: 0 0 12px; color: #00A0A8; font-size: 1.3rem; }
+.impact-message ul { margin: 12px 0 0 24px; line-height: 1.8; }
+.impact-message li { color: #555; margin: 8px 0; }
+.next-steps p { color: #555; margin: 8px 0; line-height: 1.6; }
+
+.share-section { margin: 30px 0; }
+.share-section h3 { margin: 0 0 12px; color: #00A0A8; font-size: 1.3rem; }
+.share-section p { color: #666; margin-bottom: 16px; }
+.social-share { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.share-btn { padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; color: white; transition: all .2s ease; }
+.share-btn.facebook { background: #1877f2; }
+.share-btn.facebook:hover { background: #145dbf; }
+.share-btn.twitter { background: #1da1f2; }
+.share-btn.twitter:hover { background: #0c85d0; }
+
+.actions { display: flex; gap: 15px; justify-content: center; margin-top: 30px; }
+.btn-primary { padding: 14px 28px; border-radius: 8px; background: #00C2CB; color: white; text-decoration: none; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.15); transition: all .2s ease; }
+.btn-primary:hover { background: #00A0A8; transform: translateY(-1px); }
+.btn-secondary { padding: 14px 28px; border-radius: 8px; border: 2px solid #00C2CB; color: #00C2CB; text-decoration: none; font-weight: 600; transition: all .2s ease; }
+.btn-secondary:hover { background: #00C2CB; color: white; }
+
+@media (max-width: 768px) {
+  .thankyou-page .page-hero h1 { font-size: 2.4rem; }
+  .actions { flex-direction: column; }
+  .amount-display { flex-direction: column; gap: 4px; }
+  .social-share { flex-direction: column; }
+}

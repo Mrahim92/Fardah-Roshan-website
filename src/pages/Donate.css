@@ -1,0 +1,49 @@
+.donate-page .page-hero { background: linear-gradient(135deg, #00C2CB, #00A0A8); color: white; padding: 80px 0 60px; text-align: center; }
+.donate-page .page-hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.donate-page .page-hero p { font-size: 1.15rem; max-width: 800px; margin: 0 auto; }
+
+.donate-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; }
+.donate-card, .impact-card { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 24px; }
+.section-title { margin: 0 0 12px 0; }
+
+.amounts { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 12px; margin: 10px 0 20px; max-width: 100%; }
+.amount { padding: 14px 16px; border-radius: 10px; border: 2px solid #00C2CB; background: white; color: #00C2CB; font-weight: 700; font-size: 1.15rem; cursor: pointer; transition: all .2s ease; }
+.amount:hover { background: #00C2CB; color: white; transform: translateY(-1px); }
+.amount.selected { background: #00C2CB; color: white; box-shadow: 0 4px 12px rgba(0, 194, 203, 0.3); }
+
+.other label { display: block; margin: 10px 0 8px; color: #555; }
+.other-input-row { display: flex; align-items: center; gap: 10px; }
+.currency { font-weight: 700; color: #333; }
+.other-input-row input { flex: 1; padding: 12px 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
+.other-input-row .btn-primary { padding: 12px 18px; border: none; border-radius: 8px; background: #FFDE00; color: #333; font-weight: 700; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+.other-input-row .btn-primary:hover { background: #FFD700; }
+
+.error { color: #b00020; margin-top: 8px; }
+.note { color: #777; font-size: .95rem; margin-top: 6px; }
+
+.impact-card h3 { margin: 0 0 10px; color: #00A0A8; }
+.impact-card ul { margin: 10px 0 0 18px; color: #555; line-height: 1.6; }
+
+.trust-signals { background: #f0f9fa; border: 2px solid #00C2CB; padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center; }
+.trust-signals h4 { margin: 0 0 12px; color: #00A0A8; font-size: 1.2rem; }
+.trust-signals p { margin: 8px 0; color: #555; font-size: 0.95rem; }
+.trust-signals strong { color: #333; font-size: 1.05rem; }
+.trust-signals .secure-badge { color: #00A0A8; font-weight: 600; margin-top: 12px; }
+
+.already { display: inline-block; margin-top: 16px; color: #00C2CB; text-decoration: none; font-weight: 600; }
+.already:hover { text-decoration: underline; }
+
+.paypal-container { margin-top: 24px; }
+.secure-notice { text-align: center; color: #666; font-size: 0.9rem; margin-top: 12px; }
+
+.loading { text-align: center; padding: 40px 20px; color: #666; }
+.error-box { background: #ffeaea; border: 1px solid #ffcccc; border-radius: 8px; padding: 16px; margin-top: 20px; color: #b00020; }
+
+@media (max-width: 968px) {
+  .donate-grid { grid-template-columns: 1fr; }
+  .donate-page .page-hero h1 { font-size: 2.4rem; }
+}
+
+
+
+

@@ -93,7 +93,7 @@ function Header() {
           </nav>
 
           <div className="header-actions">
-            <Link to="/contact" className="donate-button">
+            <Link to="/donate" className="donate-button" onClick={() => setIsMenuOpen(false)}>
               <Heart size={18} fill="currentColor" />
               <span>Donate</span>
             </Link>

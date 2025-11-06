@@ -6,7 +6,7 @@ function VideoGallery() {
   const videos = [
     { name: 'Amir Shir Ali Khan School', file: 'Amir Shir ali khan school vidio -1742116663804-video.mp4' },
     { name: 'Ashrafulbilad School Computer Lab', file: 'Ashrafulbilad school vidio of computer lab-1744783406022-video.mp4' },
-    { name: 'Bamian Library', file: 'Bamian Library vidio-1742117033115-video.mp4' },
+    { name: 'Bamiyan Library', file: 'Bamian Library vidio-1742117033115-video.mp4' },
   ]
 
   return (

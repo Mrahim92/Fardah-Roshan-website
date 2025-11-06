@@ -108,7 +108,7 @@ const resources = {
         kandahar: 'Kandahar',
         helmand: 'Helmand',
         herat: 'Herat',
-        bamian: 'Bamian',
+        bamian: 'Bamiyan',
         ghazni: 'Ghazni',
       },
       // Library Names (from CSV dictionary)

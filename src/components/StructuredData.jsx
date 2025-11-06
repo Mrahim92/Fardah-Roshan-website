@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 
 function StructuredData() {
-  const siteUrl = 'https://mrahim92.github.io/Fardah-Roshan-website'
+  const siteUrl = 'https://www.fardah-roshan.website'
   
   // Organization Schema
   const organizationSchema = {

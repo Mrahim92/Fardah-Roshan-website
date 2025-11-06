@@ -14,7 +14,7 @@ function SEO({
   const currentLanguage = i18n.language || 'en'
   
   // Site configuration
-  const siteUrl = 'https://mrahim92.github.io/Fardah-Roshan-website'
+  const siteUrl = 'https://www.fardah-roshan.website'
   const defaultImage = `${siteUrl}/og-image.jpg` // We'll create this
   const organizationName = 'Fardah Roshan Academy'
   

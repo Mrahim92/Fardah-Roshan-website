@@ -4,107 +4,107 @@
   
   <!-- Home Page -->
   <url>
-    <loc>https://mrahim92.github.io/Fardah-Roshan-website/</loc>
+    <loc>https://www.fardah-roshan.website/</loc>
     <lastmod>2025-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mrahim92.github.io/Fardah-Roshan-website/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="fa" href="https://mrahim92.github.io/Fardah-Roshan-website/?lang=fa" />
-    <xhtml:link rel="alternate" hreflang="ps" href="https://mrahim92.github.io/Fardah-Roshan-website/?lang=ps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fardah-roshan.website/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://www.fardah-roshan.website/?lang=fa" />
+    <xhtml:link rel="alternate" hreflang="ps" href="https://www.fardah-roshan.website/?lang=ps" />
   </url>
   
   <!-- About Page -->
   <url>
-    <loc>https://mrahim92.github.io/Fardah-Roshan-website/about</loc>
+    <loc>https://www.fardah-roshan.website/about</loc>
     <lastmod>2025-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mrahim92.github.io/Fardah-Roshan-website/about?lang=en" />
-    <xhtml:link rel="alternate" hreflang="fa" href="https://mrahim92.github.io/Fardah-Roshan-website/about?lang=fa" />
-    <xhtml:link rel="alternate" hreflang="ps" href="https://mrahim92.github.io/Fardah-Roshan-website/about?lang=ps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fardah-roshan.website/about?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://www.fardah-roshan.website/about?lang=fa" />
+    <xhtml:link rel="alternate" hreflang="ps" href="https://www.fardah-roshan.website/about?lang=ps" />
   </url>
   
   <!-- Donate Page - HIGH PRIORITY -->
   <url>
-    <loc>https://mrahim92.github.io/Fardah-Roshan-website/donate</loc>
+    <loc>https://www.fardah-roshan.website/donate</loc>
     <lastmod>2025-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mrahim92.github.io/Fardah-Roshan-website/donate?lang=en" />
-    <xhtml:link rel="alternate" hreflang="fa" href="https://mrahim92.github.io/Fardah-Roshan-website/donate?lang=fa" />
-    <xhtml:link rel="alternate" hreflang="ps" href="https://mrahim92.github.io/Fardah-Roshan-website/donate?lang=ps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fardah-roshan.website/donate?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://www.fardah-roshan.website/donate?lang=fa" />
+    <xhtml:link rel="alternate" hreflang="ps" href="https://www.fardah-roshan.website/donate?lang=ps" />
   </url>
   
   <!-- Program Pages -->
   <url>
-    <loc>https://mrahim92.github.io/Fardah-Roshan-website/computer-labs</loc>
+    <loc>https://www.fardah-roshan.website/computer-labs</loc>
     <lastmod>2025-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mrahim92.github.io/Fardah-Roshan-website/computer-labs?lang=en" />
-    <xhtml:link rel="alternate" hreflang="fa" href="https://mrahim92.github.io/Fardah-Roshan-website/computer-labs?lang=fa" />
-    <xhtml:link rel="alternate" hreflang="ps" href="https://mrahim92.github.io/Fardah-Roshan-website/computer-labs?lang=ps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fardah-roshan.website/computer-labs?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://www.fardah-roshan.website/computer-labs?lang=fa" />
+    <xhtml:link rel="alternate" hreflang="ps" href="https://www.fardah-roshan.website/computer-labs?lang=ps" />
   </url>
   
   <url>
-    <loc>https://mrahim92.github.io/Fardah-Roshan-website/libraries</loc>
+    <loc>https://www.fardah-roshan.website/libraries</loc>
     <lastmod>2025-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mrahim92.github.io/Fardah-Roshan-website/libraries?lang=en" />
-    <xhtml:link rel="alternate" hreflang="fa" href="https://mrahim92.github.io/Fardah-Roshan-website/libraries?lang=fa" />
-    <xhtml:link rel="alternate" hreflang="ps" href="https://mrahim92.github.io/Fardah-Roshan-website/libraries?lang=ps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fardah-roshan.website/libraries?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://www.fardah-roshan.website/libraries?lang=fa" />
+    <xhtml:link rel="alternate" hreflang="ps" href="https://www.fardah-roshan.website/libraries?lang=ps" />
   </url>
   
   <url>
-    <loc>https://mrahim92.github.io/Fardah-Roshan-website/microschools</loc>
+    <loc>https://www.fardah-roshan.website/microschools</loc>
     <lastmod>2025-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mrahim92.github.io/Fardah-Roshan-website/microschools?lang=en" />
-    <xhtml:link rel="alternate" hreflang="fa" href="https://mrahim92.github.io/Fardah-Roshan-website/microschools?lang=fa" />
-    <xhtml:link rel="alternate" hreflang="ps" href="https://mrahim92.github.io/Fardah-Roshan-website/microschools?lang=ps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fardah-roshan.website/microschools?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://www.fardah-roshan.website/microschools?lang=fa" />
+    <xhtml:link rel="alternate" hreflang="ps" href="https://www.fardah-roshan.website/microschools?lang=ps" />
   </url>
   
   <url>
-    <loc>https://mrahim92.github.io/Fardah-Roshan-website/online-classes</loc>
+    <loc>https://www.fardah-roshan.website/online-classes</loc>
     <lastmod>2025-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mrahim92.github.io/Fardah-Roshan-website/online-classes?lang=en" />
-    <xhtml:link rel="alternate" hreflang="fa" href="https://mrahim92.github.io/Fardah-Roshan-website/online-classes?lang=fa" />
-    <xhtml:link rel="alternate" hreflang="ps" href="https://mrahim92.github.io/Fardah-Roshan-website/online-classes?lang=ps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fardah-roshan.website/online-classes?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://www.fardah-roshan.website/online-classes?lang=fa" />
+    <xhtml:link rel="alternate" hreflang="ps" href="https://www.fardah-roshan.website/online-classes?lang=ps" />
   </url>
   
   <url>
-    <loc>https://mrahim92.github.io/Fardah-Roshan-website/student-support</loc>
+    <loc>https://www.fardah-roshan.website/student-support</loc>
     <lastmod>2025-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mrahim92.github.io/Fardah-Roshan-website/student-support?lang=en" />
-    <xhtml:link rel="alternate" hreflang="fa" href="https://mrahim92.github.io/Fardah-Roshan-website/student-support?lang=fa" />
-    <xhtml:link rel="alternate" hreflang="ps" href="https://mrahim92.github.io/Fardah-Roshan-website/student-support?lang=ps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fardah-roshan.website/student-support?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://www.fardah-roshan.website/student-support?lang=fa" />
+    <xhtml:link rel="alternate" hreflang="ps" href="https://www.fardah-roshan.website/student-support?lang=ps" />
   </url>
   
   <url>
-    <loc>https://mrahim92.github.io/Fardah-Roshan-website/school-development</loc>
+    <loc>https://www.fardah-roshan.website/school-development</loc>
     <lastmod>2025-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mrahim92.github.io/Fardah-Roshan-website/school-development?lang=en" />
-    <xhtml:link rel="alternate" hreflang="fa" href="https://mrahim92.github.io/Fardah-Roshan-website/school-development?lang=fa" />
-    <xhtml:link rel="alternate" hreflang="ps" href="https://mrahim92.github.io/Fardah-Roshan-website/school-development?lang=ps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fardah-roshan.website/school-development?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://www.fardah-roshan.website/school-development?lang=fa" />
+    <xhtml:link rel="alternate" hreflang="ps" href="https://www.fardah-roshan.website/school-development?lang=ps" />
   </url>
   
   <!-- Contact Page -->
   <url>
-    <loc>https://mrahim92.github.io/Fardah-Roshan-website/contact</loc>
+    <loc>https://www.fardah-roshan.website/contact</loc>
     <lastmod>2025-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mrahim92.github.io/Fardah-Roshan-website/contact?lang=en" />
-    <xhtml:link rel="alternate" hreflang="fa" href="https://mrahim92.github.io/Fardah-Roshan-website/contact?lang=fa" />
-    <xhtml:link rel="alternate" hreflang="ps" href="https://mrahim92.github.io/Fardah-Roshan-website/contact?lang=ps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fardah-roshan.website/contact?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://www.fardah-roshan.website/contact?lang=fa" />
+    <xhtml:link rel="alternate" hreflang="ps" href="https://www.fardah-roshan.website/contact?lang=ps" />
   </url>
   
 </urlset>

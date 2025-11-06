@@ -50,6 +50,6 @@ jobs:
       - name: Deployment Summary
         run: |
           echo "✅ Production deployment complete!"
-          echo "🌐 Site should be live at: https://www.yourdomain.com"
+          echo "🌐 Site should be live at: https://www.fardah-roshan.website"
           echo "⏱️  Changes typically visible within 2-3 minutes"
 

@@ -1,9 +1,10 @@
-name: Deploy to GitHub Pages (Staging)
+name: Deploy to GitHub Pages (Staging) - DISABLED
 
 on:
-  push:
-    branches:
-      - main
+  # Disabled - only deploying to production (Namecheap)
+  # push:
+  #   branches:
+  #     - main
   workflow_dispatch:
 
 # Sets permissions for GitHub Pages deployment

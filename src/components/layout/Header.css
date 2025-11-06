@@ -23,9 +23,9 @@
 }
 
 .logo-image {
-  height: 60px;
+  height: 240px;
   width: auto;
-  max-width: 200px;
+  max-width: 840px;
   object-fit: contain;
 }
 
@@ -294,8 +294,8 @@
   }
 
   .logo-image {
-    height: 50px;
-    max-width: 180px;
+    height: 180px;
+    max-width: 630px;
   }
   
   .donate-button {
@@ -306,8 +306,8 @@
 
 @media (max-width: 480px) {
   .logo-image {
-    height: 45px;
-    max-width: 150px;
+    height: 160px;
+    max-width: 560px;
   }
   
   .donate-button {

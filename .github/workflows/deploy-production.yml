@@ -27,10 +27,6 @@ jobs:
       
       - name: Build production site
         run: npm run build:production
-        env:
-          # Add any environment variables here
-          # VITE_PAYPAL_CLIENT_ID: ${{ secrets.VITE_PAYPAL_CLIENT_ID }}
-          # VITE_GA4_MEASUREMENT_ID: ${{ secrets.VITE_GA4_MEASUREMENT_ID }}
       
       - name: Deploy to Namecheap via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
